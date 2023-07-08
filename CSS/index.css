@@ -5,7 +5,9 @@
 }
 
 body {
-    background-color: black;
+    background-image: url(/img/fondo-alien.jpg);
+    background-size: cover;
+    background-position: center;
     color: white;
 }
 
