@@ -5,12 +5,23 @@
 }
 
 body {
-    background-image: url(/img/fondo-alien.jpg);
+    background-image: url(/img/fondo-2.jpg);
     background-size: cover;
     background-position: center;
     color: white;
 }
 
 .nav-link {
-    color: white;
+    color: rgb(4, 237, 43);
+}
+
+.carousel-item img {
+    height: auto;
+    object-fit: cover;
+}
+
+.carousel-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
