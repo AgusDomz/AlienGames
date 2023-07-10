@@ -1,5 +1,4 @@
 'use strict';
-
 import { Juego } from "../JS/clases.js";
 
 const cuerpoTabla = document.getElementById('cuerpoTabla');
@@ -65,11 +64,16 @@ const cargarTabla = () => {
             <td>${item.nombre}</td>
             <td>${item.categoria}</td>
             <td>${item.descripcion}</td>
-            <td>${item.publicado}</td>
+            <td>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input text-center" onchange="actualizarEstado(${item.codigo})" ${item.publicado ? 'checked' : ''}>
+                </div>
+            </td>
             <td>
                 <div class="d-flex gap-2">
-                    <button class="btn btn-outline-warning" onclick="mostrarModal(${item.codigo})">Editar</button>
-                    <button class="btn btn-outline-danger" onclick="borrarJuego(${item.codigo})">Borrar</button>
+                    <button class="btn btn-outline-warning" onclick="mostrarModal(${item.codigo})"><i class="fa-regular fa-pen-to-square"></i></button>
+                    <button class="btn btn-outline-danger" onclick="borrarJuego(${item.codigo})"><i class="fa-solid fa-trash fa-beat-fade"></i></button>
+                    <button class="btn btn-black")"><i class="fa-solid fa-star fa-bounce"></i></button>
                 </div>
             </td> 
         </tr>
@@ -112,6 +116,7 @@ window.borrarJuego = (codigo) => {
         almacenarDatosLS();
     }
 };
+
 
 cargarDatosLS();
 cargarTabla();
