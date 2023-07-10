@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-image: url(/img/fondo-2.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.nav-link {
+    color: rgb(4, 237, 43);
+}
+
+.carousel-item img {
+    height: auto;
+    object-fit: cover;
+}
+
+.carousel-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.principal {
+    background-position: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.card {
+    background-color: transparent;
+    border: 0;
+    border-color: transparent;
+}
+
+.card-title {
+    color: silver;
+}
+
+.card-text {
+    color: silver;
+    text-align: center;
+    text-shadow: 2px 2px 2px rgb(20, 0, 0);
+    font-size: 16px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+}
+
+li img {
+    height: auto;
+    max-width: 50px;
+}
