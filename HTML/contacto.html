@@ -1,14 +1,70 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="/CSS/contacto.css">
 </head>
-<body>
 
+<body>
+    <!-- section ubicacion -->
+    <section class="bg-gradient pb-5 pt-3 pt-lg-5 mb-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-3 mb-lg-0">
+                    <iframe
+                        src="https://www.bing.com/maps/geoplat/REST/v1/Imagery/Map/RoadVibrant/-26.793159,-65.265545/16?ms=648,345&heid=6808385750141239298,707070&fpp=-26.793158531188965,-65.26554489135742;178&ml=Basemap,LandCover,Landmarks,OsmBuildings&key=AnTcaqBi2ypp0xI-OZNi4W_ik2KhjgpqioTAtXLC8GzkMBQRMlyxvxyTnd5b73im&c=es-ES&ur=ar&fmt=jpeg&od=1&shading=hill&logo=n&da=ro"
+                        width="500" height="450" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade" title="mapaPlay"></iframe>
+                </div>
+                <div class="col-lg-6">
+                    <h1 class="display-3">Como encontrarnos</h1>
+                    <br>
+                    <p lang="la" class="lead">Estamos lejos del ruido, cerca de la ciudad.
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container">
+        <!-- Formulario -->
+        <h2 class="text-center mb-4">Formulario de Contacto</h2>
+        <form>
+            <!-- Nombre input -->
+            <div class="form-outline mb-4">
+                <label class="form-label" for="form4Example1">Nombre</label>
+                <input type="text" id="form4Example1" class="form-control" rows="3" minlength="4" required
+                    maxlength="300">
+            </div>
+            <!-- Email input -->
+            <div class="form-outline mb-4">
+                <label class="form-label" for="form4Example2">Email</label>
+                <input type="email" id="form4Example2" class="form-control" placeholder="ejemplo@mail.com" pattern="@"
+                    required minlength="8" maxlength="30">
+            </div>
+            <!-- Mensaje input -->
+            <div class="form-outline mb-4">
+                <label class="form-label" for="form4Example3">Escriba su consulta aqui:</label>
+                <textarea class="form-control bloquear" id="form4Example3" rows="4"></textarea>
+            </div>
+            <!-- Checkbox -->
+            <div class="form-check d-flex justify-content-center mb-3">
+                <input class="form-check-input me-2" type="checkbox" value="" id="form4Example4" checked />
+                <label class="form-check-label" for="form4Example4">
+                    Enviarme una copia de este mensaje.
+                </label>
+            </div>
+            <!-- Boton -->
+            <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-danger btn-block mb-4 ">Enviar</button>
+            </div>
+        </form>
+    </div>
 
 
 
@@ -27,7 +83,12 @@
 
 
     <script src="/JS/contacto.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+        integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
