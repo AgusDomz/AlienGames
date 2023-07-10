@@ -29,7 +29,7 @@
                         </li>
                         <li class="nav-item"><a href="#registro" class="nav-link btn btn-ligh">Registro</a>
                         </li>
-                        <li class="nav-item"><a href="#login" class="nav-link btn btn-ligh">Login</a>
+                        <li class="nav-item"><a href="#login" class="nav-link btn btn-ligh" data-bs-toggle="modal" data-bs-target="#exampleModal">Login</a>
                         </li>
                     </ul>
                 </div>
@@ -151,7 +151,9 @@
             <div class="card h-100">
                 <img src="/img/fornite.jpg" class="card-img-top" alt="fornite">
                 <div class="card-body">
-                    <p class="card-text">Desarrollado en 2017 por la empresa <a href="https://www.epicgames.com/">Epic Games</a>. Es un juego de tipo batalla real en el que compiten hasta cien jugadores en solitario, dúos, tríos o escuadrones.</p>
+                    <p class="card-text">Desarrollado en 2017 por la empresa <a href="https://www.epicgames.com/">Epic
+                            Games</a>. Es un juego de tipo batalla real en el que compiten hasta cien jugadores en
+                        solitario, dúos, tríos o escuadrones.</p>
                 </div>
             </div>
         </div>
@@ -230,7 +232,99 @@
 
 
 
+    <!-------------------------------- MODAL ----------------------->
 
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog ">
+            <div class="modal-content">
+
+
+
+                <div class="modal-body p-2 rounded-3 d-flex justify-content-center align-items-center flex-column vh=100 "
+                    id="modal">
+
+                    <div class="position-absolute top-0 end-0 ">
+                        <button type="button" class="btn-close mt-3 me-4 bg-white " data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+
+
+
+                    <div class=" bg-white p-3 rounded-3 text-secondary shadow-sm m-3 w-75">
+
+                        <div class="d-flex justify-content-center ">
+                            <img src="/imagenes/iron.png" alt="login icon" style="height: 8rem;">
+                        </div>
+
+                        <div class="text-center fs-1 fw-bold">Login</div>
+
+                        <form class="input-group mt-4 needs-validation">
+
+                            <div class="input-group-text ">
+                                <img src="/imagenes/user2.png" alt="user name" style="height: 1rem;">
+                            </div>
+
+                            <input type="text" class="form-control" required placeholder="Usuario" required>
+
+                            <div class="input-group mt-1">
+                                <div class="input-group-text">
+                                    <img src="/imagenes/password.png" alt="password icon" style="height: 1rem;">
+                                </div>
+                                <input class="form-control" type="password" placeholder="Contraseña">
+                            </div>
+                            <div class="row mb-4">
+                                <div class="col d-flex justify-content-center">
+                                    <!-- Checkbox -->
+                                    <div class="form-check mt-3">
+                                        <input class="form-check-input" type="checkbox" value="" id="form2Example34" />
+                                        <label class="form-check-label" for="form2Example34"> Recordar </label>
+                                    </div>
+                                </div>
+
+                                <div class="col mt-3">
+                                    <a href="#" class="text-decoration-none  text-secondary fw-semibold fst-italic pt-1"
+                                        style="font-size: 0.9rem;">¿Olvidaste tu contraseña?</a>
+                                </div>
+
+                            </div>
+
+                            <button class="btn d-grid gap-2 col-6 mx-auto text-white w-50  mt-2 fw-semibold shadow-sm "
+                                type="submit" id="iniciarsesion">
+
+                                <a href="404.html" class="text-decoration-none text-white fw-bold ">Iniciar sesion</a>
+                            </button>
+
+
+
+                        </form>
+
+                        <div class="d-flex flex-column align-items-center mt-2 ">
+
+                            <div>¿No tienes una cuenta?</div>
+                            <div>
+                                <a href="#" class="text-decoration-none text-secondary fw-bold">Registrarme</a>
+                            </div>
+
+                        </div>
+
+                        <div class="p-3">
+                            <div class="border-bottom text-center " style="height: 0.9rem;">
+                                <span class=" bg-light px-3">o</span>
+                            </div>
+                        </div>
+
+                        <div class="btn d-flex gap-2 justify-content-center border mt-3 shadow-sm ">
+                            <img src="/imagenes/google.png" alt="google icon" style="height: 1.6rem;">
+                            <div class="fw-semibold text-secondary ">Continuar con Google</div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
 
     <script src="/JS/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
