@@ -1,11 +1,23 @@
+nav{
+    background: rgb(0,0,0);
+    background: linear-gradient(342deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 22%, rgba(98,98,98,1) 70%, rgba(116,114,114,1) 99%);
+}
+
 body{
     background: rgb(0,0,0);
     background: linear-gradient(342deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 22%, rgba(98,98,98,1) 70%, rgba(116,114,114,1) 99%);
 }
+
+#navBar{
+    margin-bottom: 5%;
+}
+
 #cardjuego{
     background: rgb(20,168,21);
     background: linear-gradient(180deg, rgba(20,168,21,1) 8%, rgba(4,4,4,1) 84%);
     color: aliceblue;
+    margin-right: 3%;
+    padding: 3%;
 
 }
 #titulojuego{
@@ -31,3 +43,4 @@ body{
     transform: scale(1.2);
     filter: grayscale(0%);
 }
+
