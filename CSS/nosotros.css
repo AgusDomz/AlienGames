@@ -1,11 +1,20 @@
 nav{
-    background: rgb(0,0,0);
-    background: linear-gradient(342deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 22%, rgba(98,98,98,1) 70%, rgba(116,114,114,1) 99%);
+    background: black;
+}
+
+
+.nav-link {
+    color: rgb(4, 237, 43);
 }
 
 body{
-    background: rgb(0,0,0);
-    background: linear-gradient(342deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 22%, rgba(98,98,98,1) 70%, rgba(116,114,114,1) 99%);
+    background-image: url(../img/bamboo.jpg);
+    background-size: cover;
+}
+#fondoDojo{
+    background-image: url(../img/dojo.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
 #qSomos{
@@ -38,4 +47,14 @@ body{
 #cardNombreRight:hover{
     filter: grayscale(0);
     transform: scale(1.2);
+}
+
+
+footer{
+    background: white;
+    border: solid red;
+}
+li img {
+    height: auto;
+    max-width: 50px;
 }
