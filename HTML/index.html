@@ -252,25 +252,25 @@
 
                     <div class=" bg-white p-3 rounded-3 text-secondary shadow-sm m-3 w-75">
 
-                        <div class="d-flex justify-content-center ">
+                        <div class="d-flex justify-content-center">
                             <img src="/imagenes/iron.png" alt="login icon" style="height: 8rem;">
                         </div>
 
                         <div class="text-center fs-1 fw-bold">Login</div>
 
-                        <form class="input-group mt-4 needs-validation">
+                        <form class="input-group mt-4 needs-validation" id="formLogin">
 
                             <div class="input-group-text ">
                                 <img src="/imagenes/user2.png" alt="user name" style="height: 1rem;">
                             </div>
 
-                            <input type="text" class="form-control" required placeholder="Usuario" required>
+                            <input type="text" class="form-control" id="idUsuarioLogin" required placeholder="Usuario" required>
 
                             <div class="input-group mt-1">
                                 <div class="input-group-text">
                                     <img src="/imagenes/password.png" alt="password icon" style="height: 1rem;">
                                 </div>
-                                <input class="form-control" type="password" placeholder="Contraseña">
+                                <input class="form-control" type="password" placeholder="Contraseña" id="idContraseñaLogin">
                             </div>
                             <div class="row mb-4">
                                 <div class="col d-flex justify-content-center">
@@ -288,21 +288,16 @@
 
                             </div>
 
-                            <button class="btn d-grid gap-2 col-6 mx-auto text-white w-50  mt-2 fw-semibold shadow-sm "
-                                type="submit" id="iniciarsesion">
-
-                                <a href="404.html" class="text-decoration-none text-white fw-bold ">Iniciar sesion</a>
+                            <button class="btn d-grid gap-2 col-6 mx-auto w-50  mt-2"
+                                type="submit"> Ingresar
                             </button>
-
-
-
                         </form>
 
                         <div class="d-flex flex-column align-items-center mt-2 ">
 
                             <div>¿No tienes una cuenta?</div>
                             <div>
-                                <a href="#" class="text-decoration-none text-secondary fw-bold">Registrarme</a>
+                                <a href="/HTML/registro.html" class="text-decoration-none text-secondary fw-bold">Registrarme</a>
                             </div>
 
                         </div>
@@ -327,6 +322,7 @@
     </div>
 
     <script src="/JS/index.js"></script>
+    <script src="/JS/registro.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
