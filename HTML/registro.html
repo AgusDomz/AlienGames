@@ -17,33 +17,28 @@
     <div >
         <div class="text-center fs-1 fw-bold" >¡Regristrate Ahora!</div>
 
-        <form class="input-group mt-4 needs-validation d-flex justify-content-center ">
-
-
-
+        <form id="formRegistro" class="input-group mt-4 needs-validation d-flex justify-content-center">
             <div class="input-group mt-1 w-75 d-flex  ">
               <div class="input-group-text">
-                <img src="/imagenes/user (2).png" alt="user icon" style="height: 1rem;">
+                <img src="/img/logo de pagina.png" alt="user icon" style="height: 1rem;">
               </div>
-              <input class="form-control" type="text" placeholder="Nombre y Apellido">
+              <input class="form-control" type="text" id="idNombre" placeholder="Nombre" required>
             </div>
             <div class="input-group mt-1 w-75">
               <div class="input-group-text">
-                <img src="/imagenes/user (2).png" alt="email icon" style="height: 1rem;">
+                <img src="/img/logo de pagina.png" alt="email icon" style="height: 1rem;">
               </div>
-              <input class="form-control" type="text" placeholder="Email">
+              <input class="form-control" type="text" id="idEmail" placeholder="Email">
             </div>
 
 
             <div class="input-group mt-1 w-75">
               <div class="input-group-text">
-                <img src="/imagenes/password.png" alt="password icon" style="height: 1rem;">
+                <img src="/img/logo de pagina.png" alt="password icon" style="height: 1rem;">
               </div>
-              <input class="form-control" type="password" placeholder="Contraseña">
+              <input class="form-control" id="idContraseña" type="password" required placeholder="Contraseña">
             </div>
-            <button class="btn btn-success d-grid gap-2 col-6 mx-auto text-white w-50 mt-4  mt-2 fw-semibold shadow-sm "  type="submit" id="iniciarsesion" >
-
-                <a href="404.html" class="text-decoration-none text-white fw-bold ">Crear Cuenta</a>
+            <button class="btn btn-success d-grid gap-2 col-6 mx-auto text-white w-50 mt-4  mt-2 fw-semibold shadow-sm "  type="submit" >REGISTRARSE
               </button>
 
           </form>
