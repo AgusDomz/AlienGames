@@ -12,6 +12,7 @@
 </head>
 
 <body>
+
     <header>
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
@@ -26,10 +27,8 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="m-3 navbar-nav ms-auto mb-lg-0 d-flex align-items-center fw-bold">
                         <li class="nav-item"><a href="#inicio" class="nav-link btn btn-outline-ligh">Inicio</a>
-                        </li>
-                        <li class="nav-item"><a href="#registro" class="nav-link btn btn-ligh">Registro</a>
-                        </li>
-                        <li class="nav-item"><a href="#login" class="nav-link btn btn-ligh" data-bs-toggle="modal" data-bs-target="#exampleModal">Login</a>
+                        <li class="nav-item"><a href="#login" class="nav-link btn btn-ligh" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">Login</a>
                         </li>
                     </ul>
                 </div>
@@ -37,19 +36,21 @@
         </nav>
     </header>
     <hr>
-    <div class="card mb-3 principal" style="max-width: 540px;">
-        <div class="row g-0">
-            <div class="col-md-4">
-                <img src="/img/spider2.jpg" class="img-fluid rounded-start" alt="spider2">
-            </div>
-            <div class="col-md-8">
-                <div class="card-body">
-                    <h5 class="card-title">Marvel: Spiderman II</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                        additional content. This content is a little bit longer.</p>
-                </div>
-            </div>
-        </div>
+    <div class="clearfix">
+        <img src="/IMG/spider2.jpg" class="col-md-6 float-md-end mb-3 ms-md-3 img-fluid" alt="spider2">
+        <p>
+            A paragraph of placeholder text. We're using it here to show the use of the clearfix class. We're adding
+            quite a few meaningless phrases here to demonstrate how the columns interact here with the floated image.
+        </p>
+        <p>
+            As you can see the paragraphs gracefully wrap around the floated image. Now imagine how this would look with
+            some actual content in here, rather than just this boring placeholder text that goes on and on, but actually
+            conveys no tangible information at. It simply takes up space and should not really be read.
+        </p>
+        <p>
+            And yet, here you are, still persevering in reading this placeholder text, hoping for some more insights, or
+            some hidden easter egg of content. A joke, perhaps. Unfortunately, there's none of that here.
+        </p>
     </div>
     <hr>
     <div id="carouselExampleIndicators" class="carousel slide">
@@ -97,7 +98,19 @@
         </button>
     </div>
     <hr>
-    <div class="row row-cols-1 row-cols-md-4 g-4">
+
+    <div class="row row-cols-1 row-cols-md-5 d-flex justify-content-around">
+        <div class="row align-items-center">
+            <div class="col">
+                <div class="card h-100">
+                    <img src="/img/maden-23.jpg" class="card-img-top" alt="maden-23">
+                    <div class="card-body">
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="col">
             <div class="card h-100">
                 <img src="/img/maden-23.jpg" class="card-img-top" alt="maden-23">
@@ -128,10 +141,20 @@
         </div>
     </div>
     <hr>
-    <div class="row row-cols-1 row-cols-md-4 g-4">
+
+    <div class="row row-cols-1 row-cols-md-5 d-flex justify-content-around">
         <div class="col">
             <div class="card h-100">
                 <img src="/img/cod-war-II.jpg" class="card-img-top" alt="Cod-war-II">
+                <div class="card-body">
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                        additional content. This content is a little bit longer.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="/img/valorant.jpg" class="card-img-top" alt="Valorant">
                 <div class="card-body">
                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
                         additional content. This content is a little bit longer.</p>
@@ -159,10 +182,11 @@
         </div>
     </div>
     <hr>
-    <div class="row row-cols-1 row-cols-md-4 g-4">
+
+    <div class="row row-cols-1 row-cols-md-5 d-flex justify-content-around">
         <div class="col">
             <div class="card h-100">
-                <img src="/img/valorant.jpg" class="card-img-top" alt="Valorant">
+                <img src="/IMG/hollow-knight.jpg" class="card-img-top" alt="hollow-knight">
                 <div class="card-body">
                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
                         additional content. This content is a little bit longer.</p>
@@ -176,8 +200,15 @@
                     <p class="card-text">This card has supporting text below as a natural lead-in to additional content.
                     </p>
                 </div>
-                <div class="card-footer">
-                    <small class="text-body-secondary">Last updated 3 mins ago</small>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="/IMG/furi.jpg" class="card-img-top" alt="furi">
+                <div class="card-body">
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                        additional content. This card has even longer content than the first to show that equal height
+                        action.</p>
                 </div>
             </div>
         </div>
@@ -192,6 +223,7 @@
             </div>
         </div>
     </div>
+    <hr>
 
     <div class="container">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
@@ -264,13 +296,15 @@
                                 <img src="/imagenes/user2.png" alt="user name" style="height: 1rem;">
                             </div>
 
-                            <input type="text" class="form-control" id="idUsuarioLogin" required placeholder="Usuario" required>
+                            <input type="text" class="form-control" id="idUsuarioLogin" required placeholder="Usuario"
+                                required>
 
                             <div class="input-group mt-1">
                                 <div class="input-group-text">
                                     <img src="/imagenes/password.png" alt="password icon" style="height: 1rem;">
                                 </div>
-                                <input class="form-control" type="password" placeholder="Contraseña" id="idContraseñaLogin">
+                                <input class="form-control" type="password" placeholder="Contraseña"
+                                    id="idContraseñaLogin">
                             </div>
                             <div class="row mb-4">
                                 <div class="col d-flex justify-content-center">
@@ -288,8 +322,7 @@
 
                             </div>
 
-                            <button class="btn d-grid gap-2 col-6 mx-auto w-50  mt-2"
-                                type="submit"> Ingresar
+                            <button class="btn d-grid gap-2 col-6 mx-auto w-50  mt-2" type="submit"> Ingresar
                             </button>
                         </form>
 
@@ -297,7 +330,8 @@
 
                             <div>¿No tienes una cuenta?</div>
                             <div>
-                                <a href="/HTML/registro.html" class="text-decoration-none text-secondary fw-bold">Registrarme</a>
+                                <a href="/HTML/registro.html"
+                                    class="text-decoration-none text-secondary fw-bold">Registrarme</a>
                             </div>
 
                         </div>
