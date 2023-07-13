@@ -12,12 +12,13 @@
 </head>
 
 <body>
+    <!-- Navar -->
     <header>
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
                 <a class="navbar-brand p-0 d-flex" href="/HTML/index.html"><img src="/img/logo de pagina.png" alt="logo"
                         width="50" height="50"></a>
-                <h1 class="m-0 pt-2 pt-md-0">AllienGames</h1>
+                <h1 class="m-0 pt-2 pt-md-0">AlienGames</h1>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -26,10 +27,8 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="m-3 navbar-nav ms-auto mb-lg-0 d-flex align-items-center fw-bold">
                         <li class="nav-item"><a href="#inicio" class="nav-link btn btn-outline-ligh">Inicio</a>
-                        </li>
-                        <li class="nav-item"><a href="#registro" class="nav-link btn btn-ligh">Registro</a>
-                        </li>
-                        <li class="nav-item"><a href="#login" class="nav-link btn btn-ligh" data-bs-toggle="modal" data-bs-target="#exampleModal">Login</a>
+                        <li class="nav-item"><a href="#login" class="nav-link btn btn-ligh" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">Login</a>
                         </li>
                     </ul>
                 </div>
@@ -37,21 +36,23 @@
         </nav>
     </header>
     <hr>
-    <div class="card mb-3 principal" style="max-width: 540px;">
-        <div class="row g-0">
-            <div class="col-md-4">
-                <img src="/img/spider2.jpg" class="img-fluid rounded-start" alt="spider2">
-            </div>
-            <div class="col-md-8">
-                <div class="card-body">
-                    <h5 class="card-title">Marvel: Spiderman II</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                        additional content. This content is a little bit longer.</p>
-                </div>
-            </div>
+    <!-- Card Novedades -->
+    <div class="container-xl">
+        <div class="clearfix">
+            <img src="/IMG/spider2.jpg" class="col-md-6 float-md-end mb-3 ms-md-3 img-fluid" alt="spider2">
+            <p>
+                Vuelven los dos Spider-Man, Peter Parker y Miles Morales, para una nueva y emocionante aventura en la aclamada franquicia de Marvel's Spider-Man.
+            </p>
+            <p>
+                Balancéate, salta y usa las nuevas alarañas para recorrer la Nueva York de Marvel, cambia rápidamente entre Peter Parker y Miles Morales para experimentar historias diferentes y nuevos poderes épicos, y haz frente al icónico villano Venom que amenaza con destruir sus vidas, su ciudad y a sus seres queridos.
+            </p>
+            <p class="titulo">
+                El siguiente juego de la franquicia Marvel's Spider-Man, muy pronto para la consola PlayStation®5.
+            </p>
         </div>
     </div>
     <hr>
+       <!-----Carousel --------->
     <div id="carouselExampleIndicators" class="carousel slide">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
@@ -97,102 +98,143 @@
         </button>
     </div>
     <hr>
-    <div class="row row-cols-1 row-cols-md-4 g-4">
-        <div class="col">
-            <div class="card h-100">
-                <img src="/img/maden-23.jpg" class="card-img-top" alt="maden-23">
-                <div class="card-body">
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                        additional content. This content is a little bit longer.</p>
+    <!-- Categorias con card -->
+    <div><h2>Deporte</h2></div>
+    <div class="container-fluid">
+        <div class="row row-cols-1 row-cols-md-5 d-flex justify-content-around">
+            <div class="row align-items-center">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="/IMG/football.jpg" class="card-img-top" alt="Football">
+                        <div class="card-body">
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="/img/maden-23.jpg" class="card-img-top" alt="maden-23">
+                    <div class="card-body">
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="/img/sport-fc.jpg" class="card-img-top" alt="sport-fc">
+                    <div class="card-body">
+                        <p class="card-text">This card has supporting text below as a natural lead-in to additional
+                            content.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="/img/nba-24.jpg" class="card-img-top" alt="nba-24">
+                    <div class="card-body">
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This card has even longer content than the first to show that equal
+                            height
+                            action.</p>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col">
-            <div class="card h-100">
-                <img src="/img/sport-fc.jpg" class="card-img-top" alt="sport-fc">
-                <div class="card-body">
-                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.
-                    </p>
+        <hr>
+        <h2>Shooter</h2>
+        <div class="row row-cols-1 row-cols-md-5 d-flex justify-content-around">
+            <div class="col">
+                <div class="card h-100">
+                    <img src="/img/cod-war-II.jpg" class="card-img-top" alt="Cod-war-II">
+                    <div class="card-body">
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="/img/valorant.jpg" class="card-img-top" alt="Valorant">
+                    <div class="card-body">
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="/img/battle2042.jpg" class="card-img-top" alt="Battle-2042">
+                    <div class="card-body">
+                        <p class="card-text">This card has supporting text below as a natural lead-in to additional
+                            content.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="/img/fornite.jpg" class="card-img-top" alt="fornite">
+                    <div class="card-body">
+                        <p class="card-text">Desarrollado en 2017 por la empresa <a
+                                href="https://www.epicgames.com/">Epic
+                                Games</a>. Es un juego de tipo batalla real en el que compiten hasta cien jugadores en
+                            solitario, dúos, tríos o escuadrones.</p>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col">
-            <div class="card h-100">
-                <img src="/img/nba-24.jpg" class="card-img-top" alt="nba-24">
-                <div class="card-body">
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                        additional content. This card has even longer content than the first to show that equal height
-                        action.</p>
+        <hr>
+        <h2>Indies</h2>
+        <div class="row row-cols-1 row-cols-md-5 d-flex justify-content-around">
+            <div class="col">
+                <div class="card h-100">
+                    <img src="/IMG/hollow-knight.jpg" class="card-img-top" alt="hollow-knight">
+                    <div class="card-body">
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="/img/the-binding.jpg" class="card-img-top" alt="the-binding">
+                    <div class="card-body">
+                        <p class="card-text">This card has supporting text below as a natural lead-in to additional
+                            content.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="/IMG/furi.jpg" class="card-img-top" alt="furi">
+                    <div class="card-body">
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This card has even longer content than the first to show that equal
+                            height
+                            action.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="/img/stardey-valley.jpg" class="card-img-top" alt="stardey-valley">
+                    <div class="card-body">
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This card has even longer content than the first to show that equal
+                            height
+                            action.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <hr>
-    <div class="row row-cols-1 row-cols-md-4 g-4">
-        <div class="col">
-            <div class="card h-100">
-                <img src="/img/cod-war-II.jpg" class="card-img-top" alt="Cod-war-II">
-                <div class="card-body">
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                        additional content. This content is a little bit longer.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card h-100">
-                <img src="/img/battle2042.jpg" class="card-img-top" alt="Battle-2042">
-                <div class="card-body">
-                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card h-100">
-                <img src="/img/fornite.jpg" class="card-img-top" alt="fornite">
-                <div class="card-body">
-                    <p class="card-text">Desarrollado en 2017 por la empresa <a href="https://www.epicgames.com/">Epic
-                            Games</a>. Es un juego de tipo batalla real en el que compiten hasta cien jugadores en
-                        solitario, dúos, tríos o escuadrones.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <hr>
-    <div class="row row-cols-1 row-cols-md-4 g-4">
-        <div class="col">
-            <div class="card h-100">
-                <img src="/img/valorant.jpg" class="card-img-top" alt="Valorant">
-                <div class="card-body">
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                        additional content. This content is a little bit longer.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card h-100">
-                <img src="/img/the-binding.jpg" class="card-img-top" alt="the-binding">
-                <div class="card-body">
-                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.
-                    </p>
-                </div>
-                <div class="card-footer">
-                    <small class="text-body-secondary">Last updated 3 mins ago</small>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card h-100">
-                <img src="/img/stardey-valley.jpg" class="card-img-top" alt="stardey-valley">
-                <div class="card-body">
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                        additional content. This card has even longer content than the first to show that equal height
-                        action.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
+    <!-- Footer -->
     <div class="container">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
             <div class="col-md-4 d-flex align-items-center">
@@ -264,13 +306,15 @@
                                 <img src="/imagenes/user2.png" alt="user name" style="height: 1rem;">
                             </div>
 
-                            <input type="text" class="form-control" id="idUsuarioLogin" required placeholder="Usuario" required>
+                            <input type="text" class="form-control" id="idUsuarioLogin" required placeholder="Usuario"
+                                required>
 
                             <div class="input-group mt-1">
                                 <div class="input-group-text">
                                     <img src="/imagenes/password.png" alt="password icon" style="height: 1rem;">
                                 </div>
-                                <input class="form-control" type="password" placeholder="Contraseña" id="idContraseñaLogin">
+                                <input class="form-control" type="password" placeholder="Contraseña"
+                                    id="idContraseñaLogin">
                             </div>
                             <div class="row mb-4">
                                 <div class="col d-flex justify-content-center">
@@ -288,8 +332,7 @@
 
                             </div>
 
-                            <button class="btn d-grid gap-2 col-6 mx-auto w-50  mt-2"
-                                type="submit"> Ingresar
+                            <button class="btn d-grid gap-2 col-6 mx-auto w-50  mt-2" type="submit"> Ingresar
                             </button>
                         </form>
 
@@ -297,7 +340,8 @@
 
                             <div>¿No tienes una cuenta?</div>
                             <div>
-                                <a href="/HTML/registro.html" class="text-decoration-none text-secondary fw-bold">Registrarme</a>
+                                <a href="/HTML/registro.html"
+                                    class="text-decoration-none text-secondary fw-bold">Registrarme</a>
                             </div>
 
                         </div>

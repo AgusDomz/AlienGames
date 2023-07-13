@@ -4,13 +4,10 @@
     box-sizing: border-box;
 }
 
-
 body {
     font-family: 'Exo 2', sans-serif;
     background-color: black;
 }
-
-
 
 .texto {
     max-width: 100%;
