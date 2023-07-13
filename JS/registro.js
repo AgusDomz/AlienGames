@@ -22,7 +22,9 @@ registroForm.addEventListener('submit', (e) => {
 }
     localStorage.setItem('usuarios', JSON.stringify(Usuarios));
     alert('Registrado');
-    window.location.href = 'index.html'
+    
+
+    $('#modalLogin').modal('show');
 }); 
 
 
