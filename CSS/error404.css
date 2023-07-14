@@ -10,3 +10,7 @@ body {
     background-repeat: no-repeat;
     justify-content: center;
 }
+
+.nav-link {
+    color: rgb(4, 237, 43);
+}

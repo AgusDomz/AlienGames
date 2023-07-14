@@ -202,7 +202,7 @@ particlesJS(
                 }
             },
             "color": {
-                "value": "#00ff00"
+                "value": "#fff"
             },
             "shape": {
                 "type": "star",

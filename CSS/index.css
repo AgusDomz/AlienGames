@@ -9,6 +9,7 @@ body {
     background-size: cover;
     background-position: center;
     color: white;
+    font-family: 'Exo 2', sans-serif;
 }
 
 .nav-link {
