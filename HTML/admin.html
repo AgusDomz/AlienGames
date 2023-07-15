@@ -40,14 +40,38 @@
                     <ul class="m-3 navbar-nav ms-auto mb-lg-0 d-flex align-items-center fw-bold">
                         <li class="nav-item"><a href="/HTML/index.html" class="nav-link btn btn-outline-ligh">Inicio</a>
                         </li>
-                        <li class="nav-item"><a href="/HTML/login.html" class="nav-link btn btn-ligh">Login</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle btn" href="#" id="navbarDropdownMenu" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Menú
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenu">
+                                <li class="nav-item">
+                                    <a id="linkLogin" class="nav-link btn btn-ligh" href="/HTML/login.html">Login</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a id="linkAdmin" class="nav-link btn btn-ligh d-none"
+                                        href="/HTML/admin.html">Administracion</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link btn btn-ligh" href="/HTML/nosotros.html">Nosotros</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link btn btn-ligh" href="/HTML/contacto.html">Contacto</a>
+                                </li>
+                            </ul>
                         </li>
-                        <li class="nav-item"><a href="/HTML/admin.html" class="nav-link btn btn-ligh">Administracion</a>
-                        </li>
-                        <li class="nav-item"><a href="/HTML/nosotros.html" class="nav-link btn btn-ligh">Nosotros</a>
-                        </li>
-                        <li class="nav-item"><a href="/HTML/contacto.html" class="nav-link btn btn-ligh">Contacto</a>
-                        </li>
+                        <form action="" class="d-flex">
+                            <input class="form-control me-2 form-control-sm" type="search" placeholder="Buscar juego..."
+                                aria-label="Search">
+                            <button class="btn btn-outline" type="submit" style="background: #00ff00;">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </form>
+                        <a type="button" class="btn d-none text-white" href="login.html" id="userBtn"></a>
+                        <button class="btn btn-dark d-none" id="exitBtn">
+                            <i class="fa-solid fa-right-from-bracket fa-lg"></i>
+                        </button>
                     </ul>
                 </div>
             </div>
@@ -60,11 +84,12 @@
             <div class="row d-flex justify-content-center align-items-center m-5">
                 <div class="col">
                     <h1 class="text-center texto tituloAdmin">ADMIN JUEGOS!</h1>
-                    <h3 class="text-center h3-admin">Aqui puedes agregar, editar o eliminar juegos a placer, eres el ADMIN!</h3>
+                    <h3 class="text-center h3-admin">Aqui puedes agregar, editar o eliminar juegos a placer, eres el
+                        ADMIN!</h3>
                     <div class="d-flex justify-content-end mb-5 mt-5">
-                        <button type="button" class="btn btn-dark rounded-start-pill btn-lg"
-                            data-bs-toggle="modal" data-bs-target="#exampleModal">
-                            Nuevo  <i class="fa-solid fa-plus fa-fade" style="color: #00ff00;"></i>
+                        <button type="button" class="btn btn-dark rounded-start-pill btn-lg" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            Nuevo <i class="fa-solid fa-plus fa-fade" style="color: #00ff00;"></i>
                         </button>
                     </div>
                     <div class="table-responsive text-center" style="opacity: 0.85;">
@@ -88,6 +113,9 @@
             </div>
         </div>
     </section>
+
+
+    
 
     <!-- Modal Agregar -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -177,8 +205,12 @@
         integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
         crossorigin="anonymous"></script>
     <script src="/JS/admin.js" type="module"></script>
-    <script src="https://kit.fontawesome.com/62a7482696.js" crossorigin="anonymous"></script>
+    <script 
+    src="https://kit.fontawesome.com/62a7482696.js" 
+    crossorigin="anonymous">
+    </script>
     <script src="/JS/particles.min.js"></script>
+    <script src="/JS/index.js"></script>
 </body>
 
 </html>

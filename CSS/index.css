@@ -16,7 +16,6 @@ body {
     background-size: cover;
     background-position: center;
     color: white;
-    font-family: 'Exo 2', sans-serif;
 }
 
 .estilo {
@@ -38,6 +37,14 @@ h2 {
 
 .nav-link {
     color: rgb(4, 237, 43);
+}
+
+#userBtn:hover {
+    color: white;
+}
+
+#exitBtn:hover {
+    color: white;
 }
 
 .carousel-item img {
