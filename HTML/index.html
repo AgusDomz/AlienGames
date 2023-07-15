@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +13,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@800&display=swap" rel="stylesheet">
 </head>
-
 <body>
     <!-- Nabvar -->
     <header>
@@ -32,21 +30,36 @@
                     <ul class="m-3 navbar-nav ms-auto mb-lg-0 d-flex align-items-center fw-bold">
                         <li class="nav-item"><a href="/HTML/index.html" class="nav-link btn btn-outline-ligh">Inicio</a>
                         </li>
-                        <li class="nav-item"><a href="/HTML/login.html" class="nav-link btn btn-ligh">Login</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle btn" href="#" id="navbarDropdownMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Menú
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenu">
+                                <li class="nav-item">
+                                    <a id="linkLogin" class="nav-link btn btn-ligh" href="/HTML/login.html">Login</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a id="linkAdmin" class="nav-link btn btn-ligh d-none" href="/HTML/admin.html">Administracion</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link btn btn-ligh" href="/HTML/nosotros.html">Nosotros</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link btn btn-ligh" href="/HTML/contacto.html">Contacto</a>
+                                </li>
+                            </ul>
                         </li>
-                        <li class="nav-item"><a id="linkAdmin" href="/HTML/admin.html" class="nav-link btn btn-ligh d-none">Administracion</a>
-                        </li>
-                        <li class="nav-item"><a href="/HTML/nosotros.html" class="nav-link btn btn-ligh">Nosotros</a>
-                        </li>
-                        <li class="nav-item"><a href="/HTML/contacto.html" class="nav-link btn btn-ligh">Contacto/a>
-                        </a>
-                        </li>
-                        <form class="d-flex">
-                            <input class="form-control me-2 form-control-sm" type="search" placeholder="Buscar juego..." aria-label="Search">
-                            <button class="btn btn-outline" type="submit" style="background: #00ff00;"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        <form action="" class="d-flex">
+                            <input class="form-control me-2 form-control-sm"        type="search" placeholder="Buscar juego..."     aria-label="Search">
+                            <button class="btn btn-outline" type="submit"       style="background: #00ff00;">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
                         </form>
-                    </ul>
-                    
+                        <a type="button" class="btn btn-light d-none text-white" href="login.html" id="userBtn"></a>
+                        <button class="btn btn-dark d-none" id="exitBtn">
+                            <i class="fa-solid fa-right-from-bracket fa-lg"></i>
+                        </button> 
+                    </ul>         
                 </div>
             </div>
         </nav>

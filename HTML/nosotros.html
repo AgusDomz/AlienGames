@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="/CSS/nosotros.css">
 </head>
+
 <body>
     <!-- Nabvar -->
     <header>
@@ -24,70 +27,105 @@
                     <ul class="m-3 navbar-nav ms-auto mb-lg-0 d-flex align-items-center fw-bold">
                         <li class="nav-item"><a href="/HTML/index.html" class="nav-link btn btn-outline-ligh">Inicio</a>
                         </li>
-                        <li class="nav-item"><a href="/HTML/login.html" class="nav-link btn btn-ligh">Login</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle btn" href="#" id="navbarDropdownMenu" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Menú
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenu">
+                                <li class="nav-item">
+                                    <a id="linkLogin" class="nav-link btn btn-ligh" href="/HTML/login.html">Login</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a id="linkAdmin" class="nav-link btn btn-ligh d-none"
+                                        href="/HTML/admin.html">Administracion</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link btn btn-ligh" href="/HTML/nosotros.html">Nosotros</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link btn btn-ligh" href="/HTML/contacto.html">Contacto</a>
+                                </li>
+                            </ul>
                         </li>
-                        <li class="nav-item"><a href="/HTML/admin.html" class="nav-link btn btn-ligh d-none">Administracion</a>
-                        </li>
-                        <li class="nav-item"><a href="/HTML/nosotros.html" class="nav-link btn btn-ligh">Nosotros</a>
-                        </li>
-                        <li class="nav-item"><a href="/HTML/contacto.html" class="nav-link btn btn-ligh">Contacto</a>
-                        </li>
+                        <form action="" class="d-flex">
+                            <input class="form-control me-2 form-control-sm" type="search" placeholder="Buscar juego..."
+                                aria-label="Search">
+                            <button class="btn btn-outline" type="submit" style="background: #00ff00;">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </form>
+                        <a type="button" class="btn btn-light d-none text-white" href="login.html" id="userBtn"></a>
+                        <button class="btn btn-dark d-none" id="exitBtn">
+                            <i class="fa-solid fa-right-from-bracket fa-lg"></i>
+                        </button>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
     <!-- Nabvar -->
-    
+
     <div id="fondoDojo">
-        <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false" data-bs-interval="false"  style="max-width: 1400px; margin: 0 auto;">
+        <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false"
+            data-bs-interval="false" style="max-width: 1400px; margin: 0 auto;">
             <div class="carousel-inner">
-            <a href="#joseImh">
-                <div class="carousel-item active">
-                    <img src="../img/Ninja Verde.png" class="d-block w-100" alt="...">
+                <a href="#joseImh">
+                    <div class="carousel-item active">
+                        <img src="../img/Ninja Verde.png" class="d-block w-100" alt="...">
                         <div class="carousel-caption">
-                            <a href="#joseImh"><h2>José Imhoff</h2></a>
+                            <a href="#joseImh">
+                                <h2>José Imhoff</h2>
+                            </a>
                         </div>
-                </div>
-            </a>
+                    </div>
+                </a>
 
-            <a href="#agusDom">
-                <div class="carousel-item">
-                    <img src="../img/Ninja Negro.png" class="d-block w-100" alt="...">
+                <a href="#agusDom">
+                    <div class="carousel-item">
+                        <img src="../img/Ninja Negro.png" class="d-block w-100" alt="...">
                         <div class="carousel-caption">
-                            <a href="#agusDom"><h2>Agustín Domínguez</h2></a>
+                            <a href="#agusDom">
+                                <h2>Agustín Domínguez</h2>
+                            </a>
                         </div>
-                </div>
-            </a>
+                    </div>
+                </a>
 
-            <a href="#gusAndina">
-                <div class="carousel-item">
-                    <img src="../img/Ninja Azul.png" class="d-block w-100" alt="...">
+                <a href="#gusAndina">
+                    <div class="carousel-item">
+                        <img src="../img/Ninja Azul.png" class="d-block w-100" alt="...">
                         <div class="carousel-caption">
-                            <a href="#gusAndina"><h2>Gustavo Andina Silva</h2></a>
+                            <a href="#gusAndina">
+                                <h2>Gustavo Andina Silva</h2>
+                            </a>
                         </div>
-                </div>
-            </a>
+                    </div>
+                </a>
 
-            <a href="#franUtre">
-                <div class="carousel-item">
-                    <img src="../img/Ninja Blanco.png" class="d-block w-100" alt="...">
+                <a href="#franUtre">
+                    <div class="carousel-item">
+                        <img src="../img/Ninja Blanco.png" class="d-block w-100" alt="...">
                         <div class="carousel-caption">
-                            <a href="#franUtre"><h2>Franco Utrera</h2></a>
+                            <a href="#franUtre">
+                                <h2>Franco Utrera</h2>
+                            </a>
                         </div>
-                </div>
-            </a>
+                    </div>
+                </a>
 
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching"
+                data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Anterior</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching"
+                data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Siguiente</span>
             </button>
-            </div>
+        </div>
     </div>
 
 
@@ -96,69 +134,81 @@
         <div id="cardNombreleft" class="card mb-3" style="max-width: 540px; text-align: center;" id="joseImh">
             <div class="row g-0">
                 <div class="col-md-4">
-                <img src="../img/logo de pagina.png" class="img-fluid rounded-start" alt="...">
+                    <img src="../img/logo de pagina.png" class="img-fluid rounded-start" alt="...">
                 </div>
                 <div class="col-md-8">
-                <div class="card-body">
-                    <h5 class="card-title">José Imhoff</h5>
-                    <p class="card-text">Esta es una tarjeta más amplia con texto de apoyo a continuación como introducción natural a contenido adicional. Este contenido es un poco más largo.</p>
-                    <a href=""> <p class="card-text"><small class="text-muted">Instagram</small></p> </a>
-                </div>
-                </div>
-            </div>
-            </div>
-        </div>  
-            
-        <div class="row" style="justify-content: center; padding-top: 10%; text-align: center;" id="agusDom">
-            <div class="card mb-3" style="max-width: 540px;" id="cardNombreRight">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                    <img src="../img/logo de pagina.png" class="img-fluid rounded-start" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">José Imhoff</h5>
+                        <p class="card-text">Esta es una tarjeta más amplia con texto de apoyo a continuación como
+                            introducción natural a contenido adicional. Este contenido es un poco más largo.</p>
+                        <a href="">
+                            <p class="card-text"><small class="text-muted">Instagram</small></p>
+                        </a>
                     </div>
-                    <div class="col-md-8">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" style="justify-content: center; padding-top: 10%; text-align: center;" id="agusDom">
+        <div class="card mb-3" style="max-width: 540px;" id="cardNombreRight">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="../img/logo de pagina.png" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
                     <div class="card-body">
                         <h5 class="card-title">Agustín Domínguez</h5>
-                        <p class="card-text">Esta es una tarjeta más amplia con texto de apoyo a continuación como introducción natural a contenido adicional. Este contenido es un poco más largo.</p>
-                        <a href=""> <p class="card-text"><small class="text-muted">Instagram</small></p> </a>
-                    </div>
+                        <p class="card-text">Esta es una tarjeta más amplia con texto de apoyo a continuación como
+                            introducción natural a contenido adicional. Este contenido es un poco más largo.</p>
+                        <a href="">
+                            <p class="card-text"><small class="text-muted">Instagram</small></p>
+                        </a>
                     </div>
                 </div>
-                </div>
+            </div>
         </div>
+    </div>
 
-        <div class="row" style="justify-content: center; padding-top: 10%; text-align: center;" id="gusAndina">
-            <div id="cardNombreleft" class="card mb-3" style="max-width: 540px;">
-                <div class="row g-0">
-                    <div class="col-md-4">
+    <div class="row" style="justify-content: center; padding-top: 10%; text-align: center;" id="gusAndina">
+        <div id="cardNombreleft" class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+                <div class="col-md-4">
                     <img src="../img/logo de pagina.png" class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="col-md-8">
+                </div>
+                <div class="col-md-8">
                     <div class="card-body">
                         <h5 class="card-title">Gustavo Andina Silva</h5>
-                        <p class="card-text">Esta es una tarjeta más amplia con texto de apoyo a continuación como introducción natural a contenido adicional. Este contenido es un poco más largo.</p>
-                        <a href=""> <p class="card-text"><small class="text-muted">Instagram</small></p> </a>
-                    </div>
+                        <p class="card-text">Esta es una tarjeta más amplia con texto de apoyo a continuación como
+                            introducción natural a contenido adicional. Este contenido es un poco más largo.</p>
+                        <a href="">
+                            <p class="card-text"><small class="text-muted">Instagram</small></p>
+                        </a>
                     </div>
                 </div>
-                </div>
-            </div>  
-                
-            <div class="row" style="justify-content: center; padding-top: 10%; text-align: center;" id="franUtre">
-                <div class="card mb-3" style="max-width: 540px;" id="cardNombreRight">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                        <img src="../img/logo de pagina.png" class="img-fluid rounded-start" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Franco Utrera</h5>
-                            <p class="card-text">Esta es una tarjeta más amplia con texto de apoyo a continuación como introducción natural a contenido adicional. Este contenido es un poco más largo.</p>
-                            <a href=""> <p class="card-text"><small class="text-muted">Instagram</small></p> </a>
-                        </div>
-                        </div>
-                    </div>
-                    </div>
             </div>
+        </div>
+    </div>
+
+    <div class="row" style="justify-content: center; padding-top: 10%; text-align: center;" id="franUtre">
+        <div class="card mb-3" style="max-width: 540px;" id="cardNombreRight">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="../img/logo de pagina.png" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Franco Utrera</h5>
+                        <p class="card-text">Esta es una tarjeta más amplia con texto de apoyo a continuación como
+                            introducción natural a contenido adicional. Este contenido es un poco más largo.</p>
+                        <a href="">
+                            <p class="card-text"><small class="text-muted">Instagram</small></p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <div class="container">
@@ -201,7 +251,14 @@
 
 
     <script src="/JS/nosotros.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+        integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/62a7482696.js" crossorigin="anonymous"></script>
+    <script src="/JS/index.js"></script>
 </body>
+
 </html>
