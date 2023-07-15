@@ -12,6 +12,14 @@ body {
     background-attachment: fixed;
 }
 
+#userBtn:hover {
+    color: white;
+}
+
+#exitBtn:hover {
+    color: white;
+}
+
 .nav-link {
     color: rgb(4, 237, 43);
 }

@@ -1,6 +1,6 @@
 'use strict';
 
-let adminUser = {email: "admin@admin.com", contraseña: "Admin1234"};
+let adminUser = {email: "admin@admin.com", contraseña: "Admin1234", admin: "true"};
 
 const registroForm = document.getElementById('formulario-register');
 const formLogin = document.getElementById('formulario-login');
@@ -18,7 +18,7 @@ const ingresoUser = (e) => {
     if (inputEmailLogin.value === adminUser.email &&
         inputContraseñaLogin.value === adminUser.contraseña) {
         inicioSesion = true;
-        parrafoError.innerHTML = `<p class="text-center text-succes text-uppercase">${"Bienvenido Admin!"}</p>`;
+        parrafoError.innerHTML = `<p class="text-center text-success text-uppercase mt-3">${"Bienvenido Admin!"}</p>`;
 
         sessionStorage.setItem("EstadoDeSesion", JSON.stringify(inicioSesion));
         localStorage.setItem("adminUser", JSON.stringify(adminUser));
@@ -38,7 +38,7 @@ const ingresoUser = (e) => {
 
         if (resultado !== undefined) {
             inicioSesion = true;
-            parrafoError.innerHTML = `<p class="text-center text-succes text-uppercase">${"Bienvenido Usuario!"}</p>`;
+            parrafoError.innerHTML = `<p class="text-center text-success text-uppercase mt-3">${"Bienvenido Usuario!"}</p>`;
             sessionStorage.setItem("EstadoDeSesion", JSON.stringify(inicioSesion));
             localStorage.setItem("userComun", JSON.stringify(resultado));
             sessionStorage.setItem("userActivo", JSON.stringify(resultado));
@@ -46,19 +46,29 @@ const ingresoUser = (e) => {
                 window.location.replace('index.html')
             }, 2000)
         } else {
-            parrafoError.innerHTML = `<p class="text-center text-succes text-uppercase">${"Email o contraseña incorrectos!"}</p>`;
+            parrafoError.innerHTML = `<p class="text-center text-danger text-uppercase mt-3">${"Email o contraseña incorrectos!"}</p>`;
             window.setTimeout(function(){
                 window.location.reload();
             }, 2000);
         }
 
         if (inputEmailLogin.value === "" || inputContraseñaLogin.value === "") {
-            parrafoError.innerHTML = `<p class="text-center text-succes text-uppercase">${"Completa los campos!"}</p>`;
+            parrafoError.innerHTML = `<p class="text-center text-warning text-uppercase mt-3">${"Completa los campos!"}</p>`;
         }
     }
 };
 
 btnInicio.addEventListener('click', ingresoUser);
+
+
+// Validar acceso a la página admin.html
+if (window.location.href.includes("admin.html")) {
+    const adminUser = JSON.parse(localStorage.getItem('adminUser'));
+    if (!adminUser) {
+        window.location.href = "index.html";
+    }
+}
+
 
 // Registro de usuarios
 registroForm.addEventListener('submit', (e) => {
@@ -68,6 +78,12 @@ registroForm.addEventListener('submit', (e) => {
     const userEmailRegister = document.getElementById('inputEmail').value;
     const userNombreUsuario = document.getElementById('inputUser').value;
     const userContraseñaRegister = document.getElementById('inputContraseña').value;
+
+
+    const emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailValido.test(userEmailRegister)) {
+        return alert('Por favor, ingresa un email válido.');
+    }
 
     const Usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
     const userRegistrado = Usuarios.find(usuario => usuario.userEmailRegister === userEmailRegister);
@@ -88,41 +104,6 @@ registroForm.addEventListener('submit', (e) => {
     window.location.href = 'login.html';
 });
 
-
-let userAdmin = {email: "admin@admin.com", contraseña: "Admin1234"};
-let stateSesion = JSON.parse(sessionStorage.getItem("EstadoDeSesion")) || false;
-let user = JSON.parse(sessionStorage.getItem("userActivo")) || "";
-let linkAdmin = document.getElementById("linkAdmin");
-let userBtn = document.getElementById("userBtn");
-let exitBtn = document.getElementById("exitBtn");
-
-if (stateSesion) {
-    if (user.email === userAdmin.email &&
-        user.contraseña === userAdmin.contraseña) {
-        linkAdmin.className = "nav-link btn btn-ligh"
-        exitBtn.className = "btn text-ligth"
-        userBtn.className = "btn-user btn text-ligth"
-        userBtn.removeAttribute("href");
-        exitBtn.addEventListener("click", closeSesion);
-    } else {
-        exitBtn.className = "btn text-ligth"
-        userBtn.className = "btn-user btn text-ligth"
-        userBtn.innerHTML = user.nombre;
-        userBtn.removeAttribute("href")
-        exitBtn.addEventListener("click", closeSesion);
-    }
-}
-
-const closeSesion = () => {
-    if (stateSesion) {
-        stateSesion = false;
-        sessionStorage.setItem("EstadoDeSesion", JSON.stringify(stateSesion))
-        localStorage.removeItem("user")
-        window.location.replace("index.html")
-    } else {
-        window.location.reload();
-    }
-}
 
 
 // Script para animacion de formularios login y register
