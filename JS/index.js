@@ -1,5 +1,23 @@
 'use strict';
 
+// Parráfos ocultos.
+function mostrarOculto() {
+    let textoOculto = document.querySelector('.texto-oculto');
+    let botonMostrar = document.getElementById('mostrarTexto');
+
+    if (textoOculto.classList.contains('oculto')) {
+        textoOculto.classList.remove('oculto');
+        botonMostrar.innerHTML = 'Mostrar menos';
+    } else {
+        textoOculto.classList.add('oculto');
+        botonMostrar.innerHTML = 'Mostrar más';
+    }
+}
+
+
+
+// efecto de fondo.
+
 particlesJS(
     {
         "particles": {
