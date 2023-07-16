@@ -1,18 +1,22 @@
 'use strict';
 
+// Buscar
+
+
 // Parráfos ocultos.
 function mostrarOculto() {
-    let textoOculto = document.querySelector('.texto-oculto');
+    let textoOculto = document.getElementById('textoOculto');
     let botonMostrar = document.getElementById('mostrarTexto');
 
-    if (textoOculto.classList.contains('oculto')) {
-        textoOculto.classList.remove('oculto');
-        botonMostrar.innerHTML = 'Mostrar menos';
-    } else {
-        textoOculto.classList.add('oculto');
-        botonMostrar.innerHTML = 'Mostrar más';
+    if (textoOculto.style.display === "none") {
+        textoOculto.style.display = "inline";
+        botonMostrar.innerHTML = "Mostrar menos";
+      } else {
+        textoOculto.style.display = "none";
+        botonMostrar.innerHTML = "Mostrar más";
+      }
     }
-}
+  
 
 let userAdmin = {email: "admin@admin.com", contraseña: "Admin1234"};
 let stateSesion = JSON.parse(sessionStorage.getItem("EstadoDeSesion")) || false;

@@ -16,7 +16,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@800&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <div id="particles-js"></div>
+
     <!-- Nabvar -->
+
     <header>
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
@@ -30,28 +34,28 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="m-3 navbar-nav ms-auto mb-lg-0 d-flex align-items-center fw-bold">
-                        <li class="nav-item"><a href="/HTML/index.html" class="nav-link btn btn-outline-ligh">Inicio</a>
+                        <li class="nav-item"><a href="/HTML/index.html" class="nav-link btn btn-outline-light">Inicio</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle btn" href="#" id="navbarDropdownMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle btn btn-outline-light ms-1" href="#" id="navbarDropdownMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Menú
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenu">
                                 <li class="nav-item">
-                                    <a id="linkLogin" class="nav-link btn btn-ligh" href="/HTML/login.html">Login</a>
+                                    <a id="linkLogin" class="nav-link btn btn-outline-light" href="/HTML/login.html">Login</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a id="linkAdmin" class="nav-link btn btn-ligh d-none" href="/HTML/admin.html">Administracion</a>
+                                    <a id="linkAdmin" class="nav-link btn btn-outline-light d-none" href="/HTML/admin.html">Administracion</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link btn btn-ligh" href="/HTML/nosotros.html">Nosotros</a>
+                                    <a class="nav-link btn btn-outline-light" href="/HTML/nosotros.html">Nosotros</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link btn btn-ligh" href="/HTML/contacto.html">Contacto</a>
+                                    <a class="nav-link btn btn-outline-light" href="/HTML/contacto.html">Contacto</a>
                                 </li>
                             </ul>
                         </li>
-                        <form action="" class="d-flex">
+                        <form action="" class="d-flex ms-1">
                             <input class="form-control me-2 form-control-sm"        type="search" placeholder="Buscar juego..."     aria-label="Search">
                             <button class="btn btn-outline" type="submit"       style="background: #00ff00;">
                                 <i class="fa-solid fa-magnifying-glass"></i>
@@ -67,9 +71,6 @@
         </nav>
     </header>
     <!-- Nabvar -->
-
-
-    <div id="particles-js"></div>
 
     <!-- Card Novedades -->
     <div class="container-xl pt-5">
@@ -142,9 +143,9 @@
     <h2>Sport</h2>
     <div class="container-fluid">
         <div class="row row-cols-1 row-cols-md-4 justify-content-around">
-            <div class="row maincontainer">
-                <div class="col thecard mb-4">
-                    <div class="card h-100 thefront">
+            <div class="row">
+                <div class="col mb-4">
+                    <div class="card h-100">
                         <img src="/IMG/football.jpg" class="card-img-top" alt="Football">
                         <div class="card-body">
                             <p class="card-text">Juega usando los mejores equipos auténticos del fútbol internacional o
@@ -152,7 +153,6 @@
                                 del deporte rey. ¡Toma las riendas de tu club favorito o de tu once ideal y prepárate
                                 para vivir las emociones que depara el fútbol!.</p>
                         </div>
-                        <div class="theback">hola</div>
                     </div>
                 </div>
             </div>
@@ -202,10 +202,10 @@
                     <div class="card-body">
                         <p class="card-text">TCall of Duty® regresa a sus raíces con Call of Duty®: WWII, una
                             experiencia sobrecogedora que redefine la Segunda Guerra Mundial para una nueva generación.
-                           <span class="texto-oculto">Aterriza en Normandía el día D y combate por toda Europa en los emblemáticos escenarios de
+                           <span id="textoOculto">Aterriza en Normandía el día D y combate por toda Europa en los emblemáticos escenarios de
                             la guerra más monumental de la historia. Disfruta del combate clásico de Call of Duty, de
                             los lazos de camaradería y de la naturaleza implacable de la guerra.</span></p>
-                            <button id="mostrarTexto" class="btn btn-light" onclick="mostrarOculto()">Mostrar menos.</button>
+                            <button id="mostrarTexto" class="btn btn-light" onclick="mostrarOculto()">Mostrar más.</button>
                     </div>
                 </div>
             </div>
@@ -302,23 +302,22 @@
 
     <!-- Footer -->
 
-    <div class="container">
-        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-            <div class="col-md-4 d-flex align-items-center">
-                <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
-                    <svg class="bi" width="30" height="24">
-                        <use xlink:href="#bootstrap"></use>
-                    </svg>
-                </a>
-                <span class="mb-3 mb-md-0 text-body-primary">© 2023 Company, Inc</span>
-            </div>
-            <ul class="nav col-md-4 justify-content-center list-unstyled d-flex">
-                <li class="ms-3 mb-2 mb-md-2 text-body-primary"><a href="/HTML/nosotros.html">Nosotros</a></li>
-                <li class="ms-3 mb-2 mb-md-2"><img src="/IMG/logo de pagina.png" alt="logo" height="2em"></li>
-                <li class="ms-3 mb-2 mb-md-2 text-body-primary"><a href="/HTML/contacto.html">Contacto</a></li>
-            </ul>
-            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-                <div class="ms-3 mb-3 mb-md-2 text-body-primary">Siguenos:</div>
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="col-md-4 d-flex align-items-center">
+          <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+            <svg class="bi" width="30" height="24">
+              <use xlink:href="#bootstrap"></use>
+            </svg>
+          </a>
+          <span class="mb-3 mb-md-0 text-body-primary">© 2023 Company, Inc</span>
+        </div>
+        <ul class="nav col-md-4 justify-content-center list-unstyled d-flex">
+          <li class="ms-3 mb-2 mb-md-2 text-body-primary"><a class="btn btn-light" href="/HTML/nosotros.html">Nosotros</a></li>
+          <li class="ms-3 mb-2 mb-md-2"><img src="/IMG/logo de pagina.png" alt="logo" height="2em"></li>
+          <li class="ms-3 mb-2 mb-md-2 text-body-primary"><a class="btn btn-light" href="/HTML/contacto.html">Contacto</a></li>
+        </ul>
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+          <div class="ms-3 mb-3 mb-md-2 text-body-primary">Siguenos:</div>
                 <i class="fa-brands fa-fade ms-3"><svg height="2em" viewBox="0 0 448 512">
                         <style>
                             svg {
@@ -331,7 +330,7 @@
                 <i class="fa-brands fa-fade ms-3"><svg height="2em" viewBox="0 0 512 512">
                         <style>
                             svg {
-                                fill: #11e32f
+                                fill: #00ff00
                             }
                         </style>
                         <path
@@ -357,12 +356,10 @@
                         </svg></i>
             </ul>
         </footer>
-    </div>
 
-    <script src="/JS/index.js"></script>
-    <script src="/JS/particles.min.js"></script>
-    <script src="/JS/particlesjs-config.json"></script>
-
+        <script src="/JS/particlesjs-config.json"></script>
+        <script src="/JS/particles.min.js"></script>
+        
 
 
 
