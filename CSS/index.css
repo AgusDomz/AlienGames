@@ -81,6 +81,12 @@ li img {
     max-width: 50px;
 }
 
-#textoOculto {
-    display: none;
+.oculto {
+    display:none;
 }
+
+#userBtn,
+#exitBtn{
+    color: #00ff00;
+}
+

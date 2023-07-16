@@ -40,8 +40,8 @@ const closeSesion = () => {
 if (stateSesion) {
     if (user.email === userAdmin.email &&
         user.contraseña === userAdmin.contraseña) {
-        linkAdmin.className = "nav-link btn btn-ligh"
-        exitBtn.className = "btn text-ligth"
+        linkAdmin.className = "nav-link btn btn-light"
+        exitBtn.className = "btn"
         userBtn.className = "btn-user btn"
         userBtn.innerHTML = "Admin"
         userBtn.removeAttribute("href");
