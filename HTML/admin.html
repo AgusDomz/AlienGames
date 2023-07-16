@@ -4,77 +4,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>AlienGames</title>
+    <link rel="icon" type="image/x-icon" href="/img/logo de pagina.png">
+    <!-- BOOSTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!-- CSS -->
     <link rel="stylesheet" href="/CSS/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- Fond -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@800&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.6/dist/sweetalert2.all.min.js"></script>
 </head>
 
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <h1>Administracion de Juegos</h1>
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    +NUEVO
-                </button>
-                <div>
-                    <table class="table table-bordered" id="tablaJuegos">
-                        <thead>
-                            <tr>
-                                <td>Codigo</td>
-                                <td>Nombre</td>
-                                <td>Categoría</td>
-                                <td>Descripción</td>
-                                <td>Publicado</td>
-                                <td>Acciones</td>
-                            </tr>
-                        </thead>
-                        <tbody id="cuerpoTabla">
 
-                        </tbody>
-                    </table>
+    <div id="particles-js"></div>
+
+    <!-- Nabvar -->
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand p-0 d-flex" href="/HTML/index.html"><img src="/img/logo de pagina.png" alt="logo"
+                        width="50" height="50"></a>
+                <h1 class="m-0 pt-2 pt-md-0" style="color: #00ff00;">AlienGames</h1>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="m-3 navbar-nav ms-auto mb-lg-0 d-flex align-items-center fw-bold">
+                        <li class="nav-item"><a href="/HTML/index.html" class="nav-link btn btn-outline-ligh">Inicio</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle btn" href="#" id="navbarDropdownMenu" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Menú
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenu">
+                                <li class="nav-item">
+                                    <a id="linkLogin" class="nav-link btn btn-ligh" href="/HTML/login.html">Login</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a id="linkAdmin" class="nav-link btn btn-ligh d-none"
+                                        href="/HTML/admin.html">Administracion</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link btn btn-ligh" href="/HTML/nosotros.html">Nosotros</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link btn btn-ligh" href="/HTML/contacto.html">Contacto</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <form action="" class="d-flex">
+                            <input class="form-control me-2 form-control-sm" type="search" placeholder="Buscar juego..."
+                                aria-label="Search">
+                            <button class="btn btn-outline" type="submit" style="background: #00ff00;">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </form>
+                        <a type="button" class="btn d-none text-white" href="login.html" id="userBtn"></a>
+                        <button class="btn btn-dark d-none" id="exitBtn">
+                            <i class="fa-solid fa-right-from-bracket fa-lg"></i>
+                        </button>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Nabvar -->
+
+    <section>
+        <div class="container mt-5 mb-5 contenedor">
+            <div class="row d-flex justify-content-center align-items-center m-5">
+                <div class="col">
+                    <h1 class="text-center texto tituloAdmin">ADMIN JUEGOS!</h1>
+                    <h3 class="text-center h3-admin">Aqui puedes agregar, editar o eliminar juegos a placer, eres el
+                        ADMIN!</h3>
+                    <div class="d-flex justify-content-end mb-5 mt-5">
+                        <button type="button" class="btn btn-dark rounded-start-pill btn-lg" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            Nuevo <i class="fa-solid fa-plus fa-fade" style="color: #00ff00;"></i>
+                        </button>
+                    </div>
+                    <div class="table-responsive text-center" style="opacity: 0.85;">
+                        <table class="table table-bordered table-hover" id="tablaJuegos">
+                            <thead>
+                                <tr>
+                                    <th>Código</th>
+                                    <th>Nombre</th>
+                                    <th>Categoría</th>
+                                    <th>Descripción</th>
+                                    <th>Publicado</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody id="cuerpoTabla">
+                                <!-- Contenido de la tabla -->
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+
+
+    
 
     <!-- Modal Agregar -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Agregar Juego</h1>
+                    <h1 class="modal-title fs-5 text-uppercase" id="exampleModalLabel">Agregar Juego</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <form id="idForm" class="text-center p-5">
-                        <div class="form-group">
-                            <label for="codigo">Código:</label>
-                            <input type="number" class="form-control" id="idCodigo" required />
+                        <div class="form-group mb-3">
+                            <input type="text" class="form-control" id="idNombre" required
+                                placeholder="Nombre de juego:" />
                         </div>
-                        <div class="form-group">
-                            <label for="nombre">Nombre de juego:</label>
-                            <input type="text" class="form-control" id="idNombre" required />
+                        <div class="form-group mb-3">
+                            <input type="text" class="form-control" id="idCategoria" required
+                                placeholder="Categoría:" />
                         </div>
-                        <div class="form-group">
-                            <label for="categoria">Categoría:</label>
-                            <input type="text" class="form-control" id="idCategoria" required />
+                        <div class="form-group mb-3">
+                            <textarea class="form-control textAreaRezise" id="idDescripcion" rows="3"
+                                placeholder="Descripción:"></textarea>
                         </div>
-                        <div class="form-group">
-                            <label for="descripcion">Descripción:</label>
-                            <textarea class="form-control" id="idDescripcion" rows="3"></textarea>
-                        </div>
-                        <div class="form-group form-check">
-                            <input type="checkbox" class="form-check-input text-center" id="idPublicado" />
-                            <label class="form-check-label" for="publicado">Publicado</label>
+                        <div class="form-group form-check d-flex align-items-center justify-content-center mb-3">
+                            <input type="checkbox" class="form-check-input" id="idPublicado" />
+                            <label class="form-check-label" for="idPublicado">Publicar</label>
                         </div>
                         <div class="modal-footer">
-                            <button type="submit" class="btn btn-success">GUARDAR</button>
+                            <button type="submit" class="btn btn-success">AGREGAR</button>
                         </div>
                     </form>
-                </div>
 
+                </div>
             </div>
         </div>
     </div>
@@ -85,30 +159,30 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Editar Juego</h1>
+                    <h1 class="modal-title fs-5 text-uppercase" id="exampleModalLabel">Editar Juego</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <form id="idFormModal" class="text-center p-5">
-                        <div class="form-group">
-                            <label for="codigo">Código:</label>
-                            <input type="number" class="form-control" id="idCodigoModal" required />
+                        <div class="form-group m-3">
+                            <input type="number" class="form-control" id="idCodigoModal" placeholder="Código:"
+                                required />
                         </div>
-                        <div class="form-group">
-                            <label for="nombre">Nombre de juego:</label>
-                            <input type="text" class="form-control" id="idNombreModal" required />
+                        <div class="form-group m-3">
+                            <input type="text" class="form-control" id="idNombreModal" placeholder="Nombre de juego:"
+                                required />
                         </div>
-                        <div class="form-group">
-                            <label for="categoria">Categoría:</label>
-                            <input type="text" class="form-control" id="idCategoriaModal" required />
+                        <div class="form-group m-3">
+                            <input type="text" class="form-control" id="idCategoriaModal" placeholder="Categoría:"
+                                required />
                         </div>
-                        <div class="form-group">
-                            <label for="descripcion">Descripción:</label>
-                            <textarea class="form-control" id="idDescripcionModal" rows="3"></textarea>
+                        <div class="form-group m-3">
+                            <textarea class="form-control textAreaRezise" id="idDescripcionModal" rows="3"
+                                placeholder="Descripción:"></textarea>
                         </div>
-                        <div class="form-group form-check">
-                            <input type="checkbox" class="form-check-input text-center" id="idPublicadoModal" />
-                            <label class="form-check-label" for="publicado">Publicado</label>
+                        <div class="form-check d-flex justify-content-center m-3">
+                            <input type="checkbox" class="form-check-input" id="idPublicadoModal" />
+                            <label class="form-check-label" for="idPublicadoModal">Publicado</label>
                         </div>
                         <div class="modal-footer">
                             <button type="submit" class="btn btn-primary">ACTUALIZAR</button>
@@ -118,6 +192,7 @@
             </div>
         </div>
     </div>
+
     <!-- Modal Editar -->
 
 
@@ -130,7 +205,12 @@
         integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
         crossorigin="anonymous"></script>
     <script src="/JS/admin.js" type="module"></script>
-    <script src="https://kit.fontawesome.com/62a7482696.js" crossorigin="anonymous"></script>
+    <script 
+    src="https://kit.fontawesome.com/62a7482696.js" 
+    crossorigin="anonymous">
+    </script>
+    <script src="/JS/particles.min.js"></script>
+    <script src="/JS/index.js"></script>
 </body>
 
 </html>

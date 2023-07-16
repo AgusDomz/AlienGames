@@ -1,23 +1,28 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AlienGames</title>
     <link rel="icon" type="image/x-icon" href="/img/logo de pagina.png">
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!-- style -->
     <link rel="stylesheet" href="/CSS/index.css">
+    <!-- Fond -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@800&display=swap" rel="stylesheet">
 </head>
-
 <body>
+    <!-- Nabvar -->
     <header>
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
                 <a class="navbar-brand p-0 d-flex" href="/HTML/index.html"><img src="/img/logo de pagina.png" alt="logo"
                         width="50" height="50"></a>
-                <h1 class="m-0 pt-2 pt-md-0">AlienGames</h1>
+                <h1 class="m-0 pt-2 pt-md-0" style="color: #00ff00;">AlienGames</h1>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -25,33 +30,68 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="m-3 navbar-nav ms-auto mb-lg-0 d-flex align-items-center fw-bold">
-                        <li class="nav-item"><a href="#inicio" class="nav-link btn btn-outline-ligh">Inicio</a>
+                        <li class="nav-item"><a href="/HTML/index.html" class="nav-link btn btn-outline-ligh">Inicio</a>
                         </li>
-                        <li class="nav-item"><a href="#registro" class="nav-link btn btn-ligh" data-bs-toggle="registro" data-bs-target="#exampleModal">Registro</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle btn" href="#" id="navbarDropdownMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Menú
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenu">
+                                <li class="nav-item">
+                                    <a id="linkLogin" class="nav-link btn btn-ligh" href="/HTML/login.html">Login</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a id="linkAdmin" class="nav-link btn btn-ligh d-none" href="/HTML/admin.html">Administracion</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link btn btn-ligh" href="/HTML/nosotros.html">Nosotros</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link btn btn-ligh" href="/HTML/contacto.html">Contacto</a>
+                                </li>
+                            </ul>
                         </li>
-                        <li class="nav-item"><a href="#login" class="nav-link btn btn-ligh" data-bs-toggle="modal" data-bs-target="#exampleModal">Login</a>
-                        </li>
+                        <form action="" class="d-flex">
+                            <input class="form-control me-2 form-control-sm"        type="search" placeholder="Buscar juego..."     aria-label="Search">
+                            <button class="btn btn-outline" type="submit"       style="background: #00ff00;">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </form>
+                        <a type="button" class="btn btn-light d-none text-white" href="login.html" id="userBtn"></a>
+                        <button class="btn btn-dark d-none" id="exitBtn">
+                            <i class="fa-solid fa-right-from-bracket fa-lg"></i>
+                        </button> 
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    <hr>
-    <div class="card mb-3 principal" style="max-width: 540px;">
-        <div class="row g-0">
-            <div class="col-md-4">
-                <img src="/img/spider2.jpg" class="img-fluid rounded-start" alt="spider2">
-            </div>
-            <div class="col-md-8">
-                <div class="card-body">
-                    <h5 class="card-title">Marvel: Spiderman II</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                        additional content. This content is a little bit longer.</p>
-                </div>
-            </div>
+    <!-- Nabvar -->
+
+
+    <div id="particles-js"></div>
+
+    <!-- Card Novedades -->
+    <div class="container-xl pt-5">
+        <div class="clearfix">
+            <img src="/IMG/spider2.jpg" class="col-md-6 float-md-end mb-3 ms-md-3 img-fluid" alt="spider2">
+            <p class="estilo">
+                Vuelven los dos Spider-Man, Peter Parker y Miles Morales, para una nueva y emocionante aventura en la
+                aclamada franquicia de Marvel's Spider-Man.
+            </p>
+            <p class="estilo">
+                Balancéate, salta y usa las nuevas alarañas para recorrer la Nueva York de Marvel, cambia rápidamente
+                entre Peter Parker y Miles Morales para experimentar historias diferentes y nuevos poderes épicos, y haz
+                frente al icónico villano Venom que amenaza con destruir sus vidas, su ciudad y a sus seres queridos.
+            </p>
+            <p class="titulo">
+                El siguiente juego de la franquicia Marvel's Spider-Man, muy pronto para la consola PlayStation®5.
+            </p>
         </div>
     </div>
-    <hr>
+
+    <!-----Carousel--------->
+    <h2>RPG</h2>
     <div id="carouselExampleIndicators" class="carousel slide">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
@@ -96,125 +136,232 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-    <hr>
-    <div class="row row-cols-1 row-cols-md-4 g-4">
-        <div class="col">
-            <div class="card h-100">
-                <img src="/img/maden-23.jpg" class="card-img-top" alt="maden-23">
-                <div class="card-body">
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                        additional content. This content is a little bit longer.</p>
+
+    <!-- Categorias con card -->
+
+    <h2>Sport</h2>
+    <div class="container-fluid">
+        <div class="row row-cols-1 row-cols-md-4 justify-content-around">
+            <div class="row maincontainer">
+                <div class="col thecard mb-4">
+                    <div class="card h-100 thefront">
+                        <img src="/IMG/football.jpg" class="card-img-top" alt="Football">
+                        <div class="card-body">
+                            <p class="card-text">Juega usando los mejores equipos auténticos del fútbol internacional o
+                                crea tu equipo ideal fichando y desarrollando tanto jugadores de renombre como leyendas
+                                del deporte rey. ¡Toma las riendas de tu club favorito o de tu once ideal y prepárate
+                                para vivir las emociones que depara el fútbol!.</p>
+                        </div>
+                        <div class="theback">hola</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col thecard mb-4">
+                <div class="card h-100 thefront">
+                    <img src="/img/maden-23.jpg" class="card-img-top" alt="maden-23">
+                    <div class="card-body">
+                        <p class="card-text">El nuevo sistema de juego FieldSENSE™ en Madden NFL 23 equipa a los
+                            jugadores con más control en cada posición en cada modo y es una nueva base para un juego
+                            consistente y ultrarrealista. Solo disponible en PlayStation®5 y Xbox Series X|S. Madden NFL
+                            23 disponible ahora.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col thecard mb-4">
+                <div class="card h-100 thefront">
+                    <img src="/img/sport-fc.jpg" class="card-img-top" alt="sport-fc">
+                    <div class="card-body">
+                        <p class="card-text">Juega lo mejor del fútbol, fútbol, hockey sobre hielo, golf, baloncesto,
+                            Fórmula 1® y MMA con los títulos deportivos de Electronic Arts. ¡Domina el juego del mundo
+                            en nuestros juegos de FIFA, asciende a la grandeza de la parrilla en la serie Madden NFL,
+                            golpea el hielo con un juego de hockey tan auténtico que tal vez quieras traer un protector
+                            bucal con nuestros juegos de la NHL, y más!.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col thecard mb-4">
+                <div class="card h-100 thefront">
+                    <img src="/img/nba-24.jpg" class="card-img-top" alt="nba-24">
+                    <div class="card-body">
+                        <p class="card-text">Experimenta un juego de vanguardia mientras vives tus sueños de la NBA en
+                            los modos de juego inmersivos de NBA 2K24, incluidos MyCAREER, MyTEAM, MyNBA y más. Comanda
+                            la cancha como Kobe Bryant y recrea sus actuaciones más icónicas en Mamba Moments,
+                            impulsadas por su conjunto de habilidades técnicas y su mentalidad Mamba. Reúne a tus amigos
+                            y juega como tus equipos favoritos de la NBA y la WNBA hoy, nos vemos en la cancha.</p>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col">
-            <div class="card h-100">
-                <img src="/img/sport-fc.jpg" class="card-img-top" alt="sport-fc">
-                <div class="card-body">
-                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.
-                    </p>
+
+        <h2>Shooter</h2>
+        <div class="row row-cols-1 row-cols-md-4 d-flex justify-content-around">
+            <div class="col">
+                <div class="card h-100">
+                    <img src="/img/cod-war-II.jpg" class="card-img-top" alt="Cod-war-II">
+                    <div class="card-body">
+                        <p class="card-text">TCall of Duty® regresa a sus raíces con Call of Duty®: WWII, una
+                            experiencia sobrecogedora que redefine la Segunda Guerra Mundial para una nueva generación.
+                           <span class="texto-oculto">Aterriza en Normandía el día D y combate por toda Europa en los emblemáticos escenarios de
+                            la guerra más monumental de la historia. Disfruta del combate clásico de Call of Duty, de
+                            los lazos de camaradería y de la naturaleza implacable de la guerra.</span></p>
+                            <button id="mostrarTexto" class="btn btn-light" onclick="mostrarOculto()">Mostrar menos.</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="/img/valorant.jpg" class="card-img-top" alt="Valorant">
+                    <div class="card-body">
+                        <p class="card-text">Combina tu estilo y experiencia en un escenario global y competitivo.
+                            Tienes 13 rondas para atacar y defender tu lado con armas precisas y habilidades tácticas.
+                            Además, al contar con una sola vida por ronda, tendrás que pensar más rápido que tu oponente
+                            si quieres sobrevivir. Enfréntate a enemigos en los modos competitivo y normal, así como en
+                            Deathmatch y Spike Rush.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="/img/battle2042.jpg" class="card-img-top" alt="Battle-2042">
+                    <div class="card-body">
+                        <p class="card-text">Toma el control. Ahora es el momento de convertir a tu patrulla en el arma
+                            más mortífera del campo de batalla. Toma el mando en el nuevo modo Control de 24 contra 24
+                            durante el evento de dos semanas Directriz Arkangel. ¡Ya disponible!.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="/img/fornite.jpg" class="card-img-top" alt="fornite">
+                    <div class="card-body">
+                        <p class="card-text">Desarrollado en 2017 por la empresa <a
+                                href="https://www.epicgames.com/">Epic
+                                Games</a>. Es un juego de tipo batalla real en el que compiten hasta cien jugadores en
+                            solitario, dúos, tríos o escuadrones.</p>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col">
-            <div class="card h-100">
-                <img src="/img/nba-24.jpg" class="card-img-top" alt="nba-24">
-                <div class="card-body">
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                        additional content. This card has even longer content than the first to show that equal height
-                        action.</p>
+
+        <h2>Indies</h2>
+        <div class="row row-cols-1 row-cols-md-4 d-flex justify-content-around">
+            <div class="col">
+                <div class="card h-100">
+                    <img src="/IMG/hollow-knight.jpg" class="card-img-top" alt="hollow-knight">
+                    <div class="card-body">
+                        <p class="card-text">El mundo de Hollow Knight cobra vida con detalles vívidos y cambiantes, sus
+                            cavernas están llenas de criaturas extrañas y aterradoras, cada una animada a mano en un
+                            estilo 2D tradicional.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <hr>
-    <div class="row row-cols-1 row-cols-md-4 g-4">
-        <div class="col">
-            <div class="card h-100">
-                <img src="/img/cod-war-II.jpg" class="card-img-top" alt="Cod-war-II">
-                <div class="card-body">
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                        additional content. This content is a little bit longer.</p>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="/img/the-binding.jpg" class="card-img-top" alt="the-binding">
+                    <div class="card-body">
+                        <p class="card-text">The Binding of Isaac es un videojuego de rol de acción basado en la
+                            generación de mazmorras y objetos para el jugador, requiriendo eliminar un jefe final para
+                            acabar una partida correctamente. El juego se controla como un videojuego de disparos de
+                            palancas gemelas. Siendo Isaac, los jugadores en su aventura deben enfrentar monstruos y
+                            demonios usando sus propias lágrimas como proyectiles.
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col">
-            <div class="card h-100">
-                <img src="/img/battle2042.jpg" class="card-img-top" alt="Battle-2042">
-                <div class="card-body">
-                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.
-                    </p>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="/IMG/furi.jpg" class="card-img-top" alt="furi">
+                    <div class="card-body">
+                        <p class="card-text">Te han detenido. Mira lo que te han hecho… La clave es el carcelero; mátalo
+                            y serás libre. Lucha por tu libertad en este trepidante juego de lucha con espada y disparos
+                            con doble stick. Takashi Okazaki ha creado el diseño de los jefes. Carpenter Brut, Danger,
+                            The Toxic Avenger, Lorn, Scattle, Waveshaper y Kn1ght han compuesto la banda sonora
+                            original.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col">
-            <div class="card h-100">
-                <img src="/img/fornite.jpg" class="card-img-top" alt="fornite">
-                <div class="card-body">
-                    <p class="card-text">Desarrollado en 2017 por la empresa <a href="https://www.epicgames.com/">Epic
-                            Games</a>. Es un juego de tipo batalla real en el que compiten hasta cien jugadores en
-                        solitario, dúos, tríos o escuadrones.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <hr>
-    <div class="row row-cols-1 row-cols-md-4 g-4">
-        <div class="col">
-            <div class="card h-100">
-                <img src="/img/valorant.jpg" class="card-img-top" alt="Valorant">
-                <div class="card-body">
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                        additional content. This content is a little bit longer.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card h-100">
-                <img src="/img/the-binding.jpg" class="card-img-top" alt="the-binding">
-                <div class="card-body">
-                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.
-                    </p>
-                </div>
-                <div class="card-footer">
-                    <small class="text-body-secondary">Last updated 3 mins ago</small>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card h-100">
-                <img src="/img/stardey-valley.jpg" class="card-img-top" alt="stardey-valley">
-                <div class="card-body">
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                        additional content. This card has even longer content than the first to show that equal height
-                        action.</p>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="/img/stardey-valley.jpg" class="card-img-top" alt="stardey-valley">
+                    <div class="card-body">
+                        <p class="card-text">Hereda la vieja granja de tu abuelo en Stardew Valley. Armado con
+                            herramientas de segunda mano y algo de dinero, te dispones a empezar tu nueva vida. ¿Podrás
+                            aprender a vivir de la tierra y a convertir esos campos de malezas en un hogar próspero? No
+                            va a ser fácil. Desde que Joja Corporation llegó a la ciudad, las antiguas formas de vivir
+                            han desaparecido. El centro comunitario, en su momento el centro de actividad más activo de
+                            la ciudad, se encuentra ahora en ruinas. Pero el valle se encuentra lleno de oportunidades.
+                            ¡Con un poco de dedicación, podrás ser uno de los que devuelva Stardew Valley a la gloria!.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- Footer -->
+
     <div class="container">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
             <div class="col-md-4 d-flex align-items-center">
-                <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
-                    <img src="/img/logo de pagina.png" alt="logo" width="30" height="30">
-                    <use xlink:href="#logo"></use></svg>
+                <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+                    <svg class="bi" width="30" height="24">
+                        <use xlink:href="#bootstrap"></use>
+                    </svg>
                 </a>
-                <span class="text-muted">© 2023 Company, Inc</span>
+                <span class="mb-3 mb-md-0 text-body-primary">© 2023 Company, Inc</span>
             </div>
+            <ul class="nav col-md-4 justify-content-center list-unstyled d-flex">
+                <li class="ms-3 mb-2 mb-md-2 text-body-primary"><a href="/HTML/nosotros.html">Nosotros</a></li>
+                <li class="ms-3 mb-2 mb-md-2"><img src="/IMG/logo de pagina.png" alt="logo" height="2em"></li>
+                <li class="ms-3 mb-2 mb-md-2 text-body-primary"><a href="/HTML/contacto.html">Contacto</a></li>
+            </ul>
             <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-                <li class="ms-3"><a class="text-muted" href="#"><img src="/img/facebook.png" alt="facebook">
-                        <use xlink:href="#facebook"></use>
-                    </a></li>
-                <li class="ms-3"><a class="text-muted" href="#"><img src="/img/instagram-logo.png" alt="instagram">
-                        <use xlink:href="#instagram"></use></svg>
-                    </a></li>
-                <li class="ms-3"><a class="text-muted" href="#"><img src="/img/twitter.png" alt="twitter">
-                        <use xlink:href="#twitter"></use></svg>
-                    </a></li>
+                <div class="ms-3 mb-3 mb-md-2 text-body-primary">Siguenos:</div>
+                <i class="fa-brands fa-fade ms-3"><svg height="2em" viewBox="0 0 448 512">
+                        <style>
+                            svg {
+                                fill: #00ff00
+                            }
+                        </style>
+                        <path
+                            d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
+                    </svg></i>
+                <i class="fa-brands fa-fade ms-3"><svg height="2em" viewBox="0 0 512 512">
+                        <style>
+                            svg {
+                                fill: #11e32f
+                            }
+                        </style>
+                        <path
+                            d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z" />
+                    </svg>
+                    <i class="fa-brands fa-fade ms-3"><svg height="2em" viewBox="0 0 448 512">
+                            <style>
+                                svg {
+                                    fill: #00ff00
+                                }
+                            </style>
+                            <path
+                                d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                        </svg></i>
+                    <i class="fa-brands fa-fade ms-3"><svg height="2em" viewBox="0 0 448 512">
+                            <style>
+                                svg {
+                                    fill: #00ff00
+                                }
+                            </style>
+                            <path
+                                d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-48.9 158.8c.2 2.8.2 5.7.2 8.5 0 86.7-66 186.6-186.6 186.6-37.2 0-71.7-10.8-100.7-29.4 5.3.6 10.4.8 15.8.8 30.7 0 58.9-10.4 81.4-28-28.8-.6-53-19.5-61.3-45.5 10.1 1.5 19.2 1.5 29.6-1.2-30-6.1-52.5-32.5-52.5-64.4v-.8c8.7 4.9 18.9 7.9 29.6 8.3a65.447 65.447 0 0 1-29.2-54.6c0-12.2 3.2-23.4 8.9-33.1 32.3 39.8 80.8 65.8 135.2 68.6-9.3-44.5 24-80.6 64-80.6 18.9 0 35.9 7.9 47.9 20.7 14.8-2.8 29-8.3 41.6-15.8-4.9 15.2-15.2 28-28.8 36.1 13.2-1.4 26-5.1 37.8-10.2-8.9 13.1-20.1 24.7-32.9 34z" />
+                        </svg></i>
             </ul>
         </footer>
     </div>
+
+    <script src="/JS/index.js"></script>
+    <script src="/JS/particles.min.js"></script>
+    <script src="/JS/particlesjs-config.json"></script>
 
 
 
@@ -234,105 +381,17 @@
 
     <!-------------------------------- MODAL ----------------------->
 
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog ">
-            <div class="modal-content">
-
-
-
-                <div class="modal-body p-2 rounded-3 d-flex justify-content-center align-items-center flex-column vh=100 "
-                    id="modal">
-
-                    <div class="position-absolute top-0 end-0 ">
-                        <button type="button" class="btn-close mt-3 me-4 bg-white " data-bs-dismiss="modal"
-                            aria-label="Close"></button>
-                    </div>
-
-
-
-                    <div class=" bg-white p-3 rounded-3 text-secondary shadow-sm m-3 w-75">
-
-                        <div class="d-flex justify-content-center ">
-                            <img src="/imagenes/iron.png" alt="login icon" style="height: 8rem;">
-                        </div>
-
-                        <div class="text-center fs-1 fw-bold">Login</div>
-
-                        <form class="input-group mt-4 needs-validation">
-
-                            <div class="input-group-text ">
-                                <img src="/imagenes/user2.png" alt="user name" style="height: 1rem;">
-                            </div>
-
-                            <input type="text" class="form-control" required placeholder="Usuario" required>
-
-                            <div class="input-group mt-1">
-                                <div class="input-group-text">
-                                    <img src="/imagenes/password.png" alt="password icon" style="height: 1rem;">
-                                </div>
-                                <input class="form-control" type="password" placeholder="Contraseña">
-                            </div>
-                            <div class="row mb-4">
-                                <div class="col d-flex justify-content-center">
-                                    <!-- Checkbox -->
-                                    <div class="form-check mt-3">
-                                        <input class="form-check-input" type="checkbox" value="" id="form2Example34" />
-                                        <label class="form-check-label" for="form2Example34"> Recordar </label>
-                                    </div>
-                                </div>
-
-                                <div class="col mt-3">
-                                    <a href="#" class="text-decoration-none  text-secondary fw-semibold fst-italic pt-1"
-                                        style="font-size: 0.9rem;">¿Olvidaste tu contraseña?</a>
-                                </div>
-
-                            </div>
-
-                            <button class="btn d-grid gap-2 col-6 mx-auto text-white w-50  mt-2 fw-semibold shadow-sm "
-                                type="submit" id="iniciarsesion">
-
-                                <a href="404.html" class="text-decoration-none text-white fw-bold ">Iniciar sesion</a>
-                            </button>
-
-
-
-                        </form>
-
-                        <div class="d-flex flex-column align-items-center mt-2 ">
-
-                            <div>¿No tienes una cuenta?</div>
-                            <div>
-                                <a href="#" class="text-decoration-none text-secondary fw-bold">Registrarme</a>
-                            </div>
-
-                        </div>
-
-                        <div class="p-3">
-                            <div class="border-bottom text-center " style="height: 0.9rem;">
-                                <span class=" bg-light px-3">o</span>
-                            </div>
-                        </div>
-
-                        <div class="btn d-flex gap-2 justify-content-center border mt-3 shadow-sm ">
-                            <img src="/imagenes/google.png" alt="google icon" style="height: 1.6rem;">
-                            <div class="fw-semibold text-secondary ">Continuar con Google</div>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-    </div>
 
     <script src="/JS/index.js"></script>
+    <script src="/JS/registro.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/62a7482696.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
         integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
         crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/62a7482696.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

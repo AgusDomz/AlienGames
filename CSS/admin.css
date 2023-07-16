@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    
+    background-color: black;
+}
+
+#userBtn:hover {
+    color: white;
+}
+
+#exitBtn:hover {
+    color: white;
+}
+
+.texto {
+    max-width: 100%;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 50px;
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.btnNuevoJuego span {
+    transition: .4s ease-in-out all;
+    position: absolute;
+    left: 40%;
+}
+
+#particles-js {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: -1;
+}
+
+.contenedor {
+    width: 90%;
+    background-size: cover;
+    background-image: url(/img/adminFondo-dos.jpg);
+    background-position: center;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 99;
+    border-radius: 20px;
+    border: 2px solid whitesmoke;
+}
+
+
+.nav-link {
+    color: rgb(0, 255, 0);
+}
+
+.modalCustom {
+    background: #000;
+}
+
+.textAreaRezise {
+    resize: none;
+}
+
+.h3-admin {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: medium;
+}
