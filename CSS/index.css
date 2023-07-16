@@ -84,3 +84,9 @@ li img {
 .oculto {
     display:none;
 }
+
+#userBtn,
+#exitBtn{
+    color: #00ff00;
+}
+
