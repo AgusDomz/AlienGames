@@ -12,6 +12,16 @@ body{
     background-image: url(../img/bamboo.jpg);
     background-size: cover;
 }
+
+#userBtn:hover {
+    color: white;
+}
+
+#exitBtn:hover {
+    color: white;
+}
+
+
 #fondoDojo{
     background-image: url(../img/dojo.jpg);
     background-size: cover;
