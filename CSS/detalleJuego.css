@@ -1,12 +1,36 @@
-nav{
-    background: rgb(0,0,0);
-    background: linear-gradient(342deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 22%, rgba(98,98,98,1) 70%, rgba(116,114,114,1) 99%);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-    background: rgb(0,0,0);
-    background: linear-gradient(342deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 22%, rgba(98,98,98,1) 70%, rgba(116,114,114,1) 99%);
+
+body {
+    font-family: 'Exo 2', sans-serif;
+    background-color: black;
 }
+
+
+
+nav{
+    background: black;
+    color: aliceblue;
+}
+
+
+.nav-link {
+    color: rgb(4, 237, 43);
+}
+
+
+
+#particles-js {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: -1;
+}
+
 
 #navBar{
     margin-bottom: 5%;
@@ -44,3 +68,13 @@ body{
     filter: grayscale(0%);
 }
 
+footer{
+    background: white;
+    border: solid red;
+    margin-top: 200px;
+    margin-bottom: 0px;
+}
+li img {
+    height: auto;
+    max-width: 50px;
+}
