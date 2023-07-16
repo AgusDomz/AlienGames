@@ -4,11 +4,35 @@
     box-sizing: border-box;
 }
 
+#particles-js {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: -1;
+}
+
 body {
     background-color: black;
     background-size: cover;
     background-position: center;
     color: white;
+}
+
+.estilo {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+    text-align: justify;
+}
+
+.titulo {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: normal;
+    font-size: xx-large;
+    text-align: center;
+}
+
+h2 {
+    color: #00ff00;
 }
 
 .nav-link {
@@ -34,12 +58,6 @@ body {
     align-items: center;
 }
 
-.principal {
-    background-position: center;
-    text-align: center;
-    justify-content: center;
-}
-
 .card {
     background-color: transparent;
     border: 0;
@@ -52,7 +70,7 @@ body {
 
 .card-text {
     color: silver;
-    text-align: center;
+    text-align: justify;
     text-shadow: 2px 2px 2px rgb(20, 0, 0);
     font-size: 16px;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
@@ -61,4 +79,8 @@ body {
 li img {
     height: auto;
     max-width: 50px;
+}
+
+.oculto {
+    display:none;
 }
