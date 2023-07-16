@@ -14,7 +14,7 @@ function mostrarOculto() {
     }
 }
 
-let userAdmin = {email: "admin@admin.com", contraseña: "Admin1234"};
+let userAdmin = { email: "admin@admin.com", contraseña: "Admin1234" };
 let stateSesion = JSON.parse(sessionStorage.getItem("EstadoDeSesion")) || false;
 let user = JSON.parse(sessionStorage.getItem("userActivo")) || "";
 let linkAdmin = document.getElementById("linkAdmin");
@@ -60,14 +60,14 @@ particlesJS(
                 "value": 180,
                 "density": {
                     "enable": true,
-                    "value_area": 500
+                    "value_area": 800
                 }
             },
             "color": {
-                "value": "#fff"
+                "value": "#00ff00"
             },
             "shape": {
-                "type": "star",
+                "type": "circle",
                 "stroke": {
                     "width": 0,
                     "color": "#000000"
