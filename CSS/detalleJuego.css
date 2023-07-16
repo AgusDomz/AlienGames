@@ -78,3 +78,8 @@ li img {
     height: auto;
     max-width: 50px;
 }
+
+#userBtn,
+#exitBtn{
+    color: #00ff00;
+}
