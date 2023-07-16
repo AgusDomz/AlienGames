@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Nosotros</title>
+    <link rel="icon" type="image/x-icon" href="/img/logo de pagina.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="/CSS/nosotros.css">
 </head>
@@ -13,7 +14,7 @@
             <div class="container-fluid">
                 <a class="navbar-brand p-0 d-flex" href="/HTML/index.html"><img src="/img/logo de pagina.png" alt="logo"
                         width="50" height="50"></a>
-                <h1 class="m-0 pt-2 pt-md-0">AlienGames</h1>
+                <a href="./index.html" style="text-decoration: none; color: white;" ><h1 class="m-0 pt-2 pt-md-0">AlienGames</h1></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -40,7 +41,7 @@
                 <div class="carousel-item active">
                     <img src="../img/Ninja Verde.png" class="d-block w-100" alt="...">
                         <div class="carousel-caption">
-                            <a href="#joseImh"><h2>José Imhoff</h2></a>
+                            <a href="#joseImh" id="nombresCard"><h2>José Imhoff</h2></a>
                         </div>
                 </div>
             </a>
@@ -49,7 +50,7 @@
                 <div class="carousel-item">
                     <img src="../img/Ninja Negro.png" class="d-block w-100" alt="...">
                         <div class="carousel-caption">
-                            <a href="#agusDom"><h2>Agustín Domínguez</h2></a>
+                            <a href="#agusDom" id="nombresCard"><h2>Agustín Domínguez</h2></a>
                         </div>
                 </div>
             </a>
@@ -58,7 +59,7 @@
                 <div class="carousel-item">
                     <img src="../img/Ninja Azul.png" class="d-block w-100" alt="...">
                         <div class="carousel-caption">
-                            <a href="#gusAndina"><h2>Gustavo Andina Silva</h2></a>
+                            <a href="#gusAndina" id="nombresCard"><h2>Gustavo Andina Silva</h2></a>
                         </div>
                 </div>
             </a>
@@ -67,7 +68,7 @@
                 <div class="carousel-item">
                     <img src="../img/Ninja Blanco.png" class="d-block w-100" alt="...">
                         <div class="carousel-caption">
-                            <a href="#franUtre"><h2>Franco Utrera</h2></a>
+                            <a href="#franUtre" id="nombresCard"><h2>Franco Utrera</h2></a>
                         </div>
                 </div>
             </a>
@@ -84,6 +85,7 @@
             </div>
     </div>
 
+    <div id="banner"></div>
 
     <div class="row" style="justify-content: center; padding-top: 10%;">
 
@@ -137,7 +139,7 @@
                 </div>
             </div>  
                 
-            <div class="row" style="justify-content: center; padding-top: 10%; text-align: center;" id="franUtre">
+            <div class="row" style="justify-content: center; padding-top: 10%; text-align: center; margin-bottom: 300px;" id="franUtre">
                 <div class="card mb-3" style="max-width: 540px;" id="cardNombreRight">
                     <div class="row g-0">
                         <div class="col-md-4">
@@ -155,8 +157,8 @@
             </div>
 
     <!-- Footer -->
-    <div class="container">
-        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <div>
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top" style="padding-bottom: 0px;">
             <div class="col-md-4 d-flex align-items-center">
                 <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
                     <img src="/img/logo de pagina.png" alt="logo" width="30" height="30">
