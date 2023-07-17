@@ -56,9 +56,9 @@
                             </ul>
                         </li>
                         <form action="" class="d-flex ms-1">
-                            <input class="form-control me-2 form-control-sm"        type="search" placeholder="Buscar juego..."     aria-label="Search">
-                            <button class="btn btn-outline" type="submit"       style="background: #00ff00;">
-                                <i class="fa-solid fa-magnifying-glass"></i>
+                            <input class="form-control me-2 form-control-sm" type="text" placeholder="Buscar juego..." name="buscador" id="buscador"    aria-label="Search">
+                            <button class="btn btn-outline" style="background: #00ff00;">
+                            <i class="fa-solid fa-magnifying-glass"></i>
                             </button>
                         </form>
                         <a type="button" class="btn btn-light d-none text-white" href="login.html" id="userBtn"></a>
@@ -109,23 +109,23 @@
             <a href="./detalleJuego.html">
             <div class="carousel-item active">
                 <div class="carousel-content">
-                    <img src="/img/dragon_quest_xi.jpg" class="d-block h-100 w-50" alt="dragon_quest_xi">
+                    <img src="/img/dragon_quest_xi.jpg" class="d-block h-100 w-50 articulo" alt="dragon_quest_xi">
                 </div>
             </a>
             </div>
             <div class="carousel-item">
                 <div class="carousel-content">
-                    <img src="/img/elden-ring.jpg" class="d-block h-100 w-50" alt="elden-ring">
+                    <img src="/img/elden-ring.jpg" class="d-block h-100 w-50 articulo" alt="elden-ring">
                 </div>
             </div>
             <div class="carousel-item">
                 <div class="carousel-content">
-                    <img src="/img/final_fantasy_xvi.png" class="d-block h-100 w-50" alt="final_fantasy_xvi">
+                    <img src="/img/final_fantasy_xvi.png" class="d-block h-100 w-50 articulo" alt="final_fantasy_xvi">
                 </div>
             </div>
             <div class="carousel-item">
                 <div class="carousel-content">
-                    <img src="/img/monster-hunter-rise.jpg" class="d-block h-100 w-50" alt="monster-hunter-rise">
+                    <img src="/img/monster-hunter-rise.jpg" class="d-block h-100 w-50 articulo" alt="monster-hunter-rise">
                 </div>
             </div>
         </div>
@@ -147,9 +147,10 @@
     <div class="container-fluid">
         <div class="row row-cols-1 row-cols-md-4 justify-content-around">
             <div class="row">
-                <div class="col mb-4">
+                <div class="col">
                     <div class="card h-100">
-                        <img src="/IMG/football.jpg" class="card-img-top" alt="Football">
+                        <img src="/IMG/football.jpg" class="card-img-top articulo" alt="Football">
+                        <div class="video"><video src="/VIDEO/efootball2022.mp4" autoplay muted loop></video></div>
                         <div class="card-body">
                             <p class="card-text">Juega usando los mejores equipos auténticos del fútbol internacional o
                                 crea tu equipo ideal fichando y desarrollando tanto jugadores de renombre como leyendas
@@ -160,9 +161,10 @@
                     </div>
                 </div>
             </div>
-            <div class="col thecard mb-4">
-                <div class="card h-100 thefront">
-                    <img src="/img/maden-23.jpg" class="card-img-top" alt="maden-23">
+            <div class="col">
+                <div class="card h-100">
+                    <img src="/img/maden-23.jpg" class="card-img-top articulo" alt="maden-23">
+                    <div class="video"><video src="/VIDEO/madden.mp4" autoplay muted loop></video></div>
                     <div class="card-body">
                         <p class="card-text">El nuevo sistema de juego FieldSENSE™ en Madden NFL 23 equipa a los
                             jugadores con más control en cada posición en cada modo y es una nueva base para un juego
@@ -171,9 +173,10 @@
                     </div>
                 </div>
             </div>
-            <div class="col thecard mb-4">
-                <div class="card h-100 thefront">
-                    <img src="/img/sport-fc.jpg" class="card-img-top" alt="sport-fc">
+            <div class="col">
+                <div class="card h-100">
+                    <img src="/img/sport-fc.jpg" class="card-img-top articulo" alt="sport-fc">
+                    <div class="video"><video src="/VIDEO/easportsfc.mp4" autoplay muted loop></video></div>
                     <div class="card-body">
                         <p class="card-text">Juega lo mejor del fútbol, fútbol, hockey sobre hielo, golf, baloncesto,
                             Fórmula 1® y MMA con los títulos deportivos de Electronic Arts. ¡Domina el juego del mundo
@@ -184,9 +187,10 @@
                     </div>
                 </div>
             </div>
-            <div class="col thecard mb-4">
-                <div class="card h-100 thefront">
-                    <img src="/img/nba-24.jpg" class="card-img-top" alt="nba-24">
+            <div class="col">
+                <div class="card h-100">
+                    <img src="/img/nba-24.jpg" class="card-img-top articulo" alt="nba-24">
+                    <div class="video"><video src="/VIDEO/nba2k24.mp4" autoplay muted loop></video></div>
                     <div class="card-body">
                         <p class="card-text">Experimenta un juego de vanguardia mientras vives tus sueños de la NBA en
                             los modos de juego inmersivos de NBA 2K24, incluidos MyCAREER, MyTEAM, MyNBA y más. Comanda
@@ -202,20 +206,24 @@
         <div class="row row-cols-1 row-cols-md-4 d-flex justify-content-around">
             <div class="col">
                 <div class="card h-100">
-                    <img src="/img/cod-war-II.jpg" class="card-img-top" alt="Cod-war-II">
+                    <img src="/img/cod-war-II.jpg" class="card-img-top articulo" alt="Cod-war-II">
+                    <div class="video"><video src="/VIDEO/call-of-dusty MWII.mp4" autoplay muted loop></video>
+                    </div>
                     <div class="card-body">
-                        <p class="card-text">TCall of Duty® regresa a sus raíces con Call of Duty®: WWII, una
+                        <p class="card-text">Call of Duty® regresa a sus raíces con Call of Duty®: WWII, una
                             experiencia sobrecogedora que redefine la Segunda Guerra Mundial para una nueva generación.
-                           <span id="textoOculto">Aterriza en Normandía el día D y combate por toda Europa en los emblemáticos escenarios de
+                           <span class="texto-oculto oculto">Aterriza en Normandía el día D y combate por toda Europa en los emblemáticos escenarios de
                             la guerra más monumental de la historia. Disfruta del combate clásico de Call of Duty, de
                             los lazos de camaradería y de la naturaleza implacable de la guerra.</span></p>
-                            <button id="mostrarTexto" class="btn btn-light" onclick="mostrarOculto()">Mostrar más.</button>
+                            <button id="card1-mostrarTexto" class="mostrarTexto btn btn-light" onclick="mostrarOculto(1)">Mostrar más.</button>
+
                     </div>
                 </div>
             </div>
             <div class="col">
                 <div class="card h-100">
-                    <img src="/img/valorant.jpg" class="card-img-top" alt="Valorant">
+                    <img src="/img/valorant.jpg" class="card-img-top articulo" alt="Valorant">
+                    <div class="video"><video src="/VIDEO/Valorant.mp4" autoplay muted loop></video></div>
                     <div class="card-body">
                         <p class="card-text">Combina tu estilo y experiencia en un escenario global y competitivo.
                             Tienes 13 rondas para atacar y defender tu lado con armas precisas y habilidades tácticas.
@@ -227,7 +235,8 @@
             </div>
             <div class="col">
                 <div class="card h-100">
-                    <img src="/img/battle2042.jpg" class="card-img-top" alt="Battle-2042">
+                    <img src="/img/battle2042.jpg" class="card-img-top articulo" alt="Battle-2042">
+                    <div class="video"><video src="/VIDEO/Battlefield-2042.mp4" autoplay muted loop></video></div>
                     <div class="card-body">
                         <p class="card-text">Toma el control. Ahora es el momento de convertir a tu patrulla en el arma
                             más mortífera del campo de batalla. Toma el mando en el nuevo modo Control de 24 contra 24
@@ -238,7 +247,8 @@
             </div>
             <div class="col">
                 <div class="card h-100">
-                    <img src="/img/fornite.jpg" class="card-img-top" alt="fornite">
+                    <img src="/img/fornite.jpg" class="card-img-top articulo" alt="fornite">
+                    <div class="video"><video src="/VIDEO/Fornite.mp4" autoplay muted loop></video></div>
                     <div class="card-body">
                         <p class="card-text">Desarrollado en 2017 por la empresa <a
                                 href="https://www.epicgames.com/">Epic
@@ -253,7 +263,8 @@
         <div class="row row-cols-1 row-cols-md-4 d-flex justify-content-around">
             <div class="col">
                 <div class="card h-100">
-                    <img src="/IMG/hollow-knight.jpg" class="card-img-top" alt="hollow-knight">
+                    <img src="/IMG/hollow-knight.jpg" class="card-img-top articulo" alt="hollow-knight">
+                    <div class="video"><video src="/VIDEO/hollowknight.mp4" autoplay muted loop></video></div>
                     <div class="card-body">
                         <p class="card-text">El mundo de Hollow Knight cobra vida con detalles vívidos y cambiantes, sus
                             cavernas están llenas de criaturas extrañas y aterradoras, cada una animada a mano en un
@@ -263,7 +274,8 @@
             </div>
             <div class="col">
                 <div class="card h-100">
-                    <img src="/img/the-binding.jpg" class="card-img-top" alt="the-binding">
+                    <img src="/img/the-binding.jpg" class="card-img-top articulo" alt="the-binding">
+                    <div class="video"><video src="/VIDEO/the binding of isaac.mp4" autoplay muted loop></video></div>
                     <div class="card-body">
                         <p class="card-text">The Binding of Isaac es un videojuego de rol de acción basado en la
                             generación de mazmorras y objetos para el jugador, requiriendo eliminar un jefe final para
@@ -276,7 +288,8 @@
             </div>
             <div class="col">
                 <div class="card h-100">
-                    <img src="/IMG/furi.jpg" class="card-img-top" alt="furi">
+                    <img src="/IMG/furi.jpg" class="card-img-top articulo" alt="furi">
+                    <div class="video"><video src="/VIDEO/furi.mp4" autoplay muted loop></video></div>
                     <div class="card-body">
                         <p class="card-text">Te han detenido. Mira lo que te han hecho… La clave es el carcelero; mátalo
                             y serás libre. Lucha por tu libertad en este trepidante juego de lucha con espada y disparos
@@ -288,16 +301,18 @@
             </div>
             <div class="col">
                 <div class="card h-100">
-                    <img src="/img/stardey-valley.jpg" class="card-img-top" alt="stardey-valley">
+                    <img src="/img/stardey-valley.jpg" class="card-img-top articulo" alt="stardey-valley">
+                    <div class="video"><video src="/VIDEO/stardew valley.mp4" autoplay muted loop></video></div>
                     <div class="card-body">
                         <p class="card-text">Hereda la vieja granja de tu abuelo en Stardew Valley. Armado con
-                            herramientas de segunda mano y algo de dinero, te dispones a empezar tu nueva vida. ¿Podrás
+                            herramientas de segunda mano y algo de dinero, te dispones a empezar tu nueva vida. <span class="texto-oculto oculto">¿Podrás
                             aprender a vivir de la tierra y a convertir esos campos de malezas en un hogar próspero? No
                             va a ser fácil. Desde que Joja Corporation llegó a la ciudad, las antiguas formas de vivir
                             han desaparecido. El centro comunitario, en su momento el centro de actividad más activo de
                             la ciudad, se encuentra ahora en ruinas. Pero el valle se encuentra lleno de oportunidades.
                             ¡Con un poco de dedicación, podrás ser uno de los que devuelva Stardew Valley a la gloria!.
-                        </p>
+                        </span></p>
+                        <button class="mostrarTexto btn btn-light" onclick="mostrarOculto(2)">Mostrar más.</button>
                     </div>
                 </div>
             </div>
@@ -313,7 +328,7 @@
               <use xlink:href="#bootstrap"></use>
             </svg>
           </a>
-          <span class="mb-3 mb-md-0 text-body-primary">© 2023 Company, Inc</span>
+          <span class="mb-3 mb-md-0 text-body-primary">© 2023 Compañia, todos los derechos reservado.</span>
         </div>
         <ul class="nav col-md-4 justify-content-center list-unstyled d-flex">
           <li class="ms-3 mb-2 mb-md-2 text-body-primary"><a class="btn btn-light" href="/HTML/nosotros.html">Nosotros</a></li>
@@ -322,7 +337,7 @@
         </ul>
         <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
           <div class="ms-3 mb-3 mb-md-2 text-body-primary">Siguenos:</div>
-                <i class="fa-brands fa-fade ms-3"><svg height="2em" viewBox="0 0 448 512">
+                <i class="fa-brands fa-fade ms-3"><a href="/HTML/error404.html"><svg height="2em" viewBox="0 0 448 512">
                         <style>
                             svg {
                                 fill: #00ff00
@@ -330,8 +345,8 @@
                         </style>
                         <path
                             d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
-                    </svg></i>
-                <i class="fa-brands fa-fade ms-3"><svg height="2em" viewBox="0 0 512 512">
+                    </svg></i></a>
+                <i class="fa-brands fa-fade ms-3" href="/HTML/error404.html"><a href="/HTML/error404.html"><svg height="2em" viewBox="0 0 512 512">
                         <style>
                             svg {
                                 fill: #00ff00
@@ -339,8 +354,8 @@
                         </style>
                         <path
                             d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z" />
-                    </svg>
-                    <i class="fa-brands fa-fade ms-3"><svg height="2em" viewBox="0 0 448 512">
+                    </svg></a>
+                    <i class="fa-brands fa-fade ms-3"><a href="/HTML/error404.html"><svg height="2em" viewBox="0 0 448 512">
                             <style>
                                 svg {
                                     fill: #00ff00
@@ -348,8 +363,8 @@
                             </style>
                             <path
                                 d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
-                        </svg></i>
-                    <i class="fa-brands fa-fade ms-3"><svg height="2em" viewBox="0 0 448 512">
+                        </svg></i></a>
+                    <i class="fa-brands fa-fade ms-3 mr-5"><a href="/HTML/error404.html"><svg height="2em" viewBox="0 0 448 512">
                             <style>
                                 svg {
                                     fill: #00ff00
@@ -357,7 +372,7 @@
                             </style>
                             <path
                                 d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-48.9 158.8c.2 2.8.2 5.7.2 8.5 0 86.7-66 186.6-186.6 186.6-37.2 0-71.7-10.8-100.7-29.4 5.3.6 10.4.8 15.8.8 30.7 0 58.9-10.4 81.4-28-28.8-.6-53-19.5-61.3-45.5 10.1 1.5 19.2 1.5 29.6-1.2-30-6.1-52.5-32.5-52.5-64.4v-.8c8.7 4.9 18.9 7.9 29.6 8.3a65.447 65.447 0 0 1-29.2-54.6c0-12.2 3.2-23.4 8.9-33.1 32.3 39.8 80.8 65.8 135.2 68.6-9.3-44.5 24-80.6 64-80.6 18.9 0 35.9 7.9 47.9 20.7 14.8-2.8 29-8.3 41.6-15.8-4.9 15.2-15.2 28-28.8 36.1 13.2-1.4 26-5.1 37.8-10.2-8.9 13.1-20.1 24.7-32.9 34z" />
-                        </svg></i>
+                        </svg></i></a>
             </ul>
         </footer>
 
@@ -384,7 +399,7 @@
 
 
     <script src="/JS/index.js"></script>
-    <script src="/JS/registro.js"></script>
+    <script src="/JS/login.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>

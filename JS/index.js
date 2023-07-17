@@ -1,21 +1,36 @@
 'use strict';
 
 // Buscar
+document.addEventListener('keyup', e=>{ 
+    
+    if (e.target.matches('#buscador')) {
+
+    if (e.key ==='Escape')e.target.value = ''
+
+        document.querySelectorAll('.articulo').forEach(game =>{
+
+            game.textContent.toLowerCase().includes(e.target.value.toLowerCase())
+            ?game.classList.remove('filtro')
+            :game.classList.add('filtro')
+        });
+    }
+});
 
 
 // Parráfos ocultos.
-function mostrarOculto() {
-    let textoOculto = document.getElementById('textoOculto');
-    let botonMostrar = document.getElementById('mostrarTexto');
-
-    if (textoOculto.style.display === "none") {
-        textoOculto.style.display = "inline";
-        botonMostrar.innerHTML = "Mostrar menos";
-      } else {
-        textoOculto.style.display = "none";
-        botonMostrar.innerHTML = "Mostrar más";
-      }
+function mostrarOculto(cardId) {
+    let textoOculto = document.querySelector(`.card:nth-child(${cardId}) .texto-oculto`);
+    let botonMostrar = document.getElementById(`card${cardId}-mostrarTexto`);
+  
+    if (textoOculto.classList.contains('oculto')) {
+      textoOculto.classList.remove('oculto');
+      botonMostrar.innerHTML = "Mostrar menos";
+    } else {
+      textoOculto.classList.add('oculto');
+      botonMostrar.innerHTML = "Mostrar más";
     }
+  }
+  
   
 
 let userAdmin = {email: "admin@admin.com", contraseña: "Admin1234"};
