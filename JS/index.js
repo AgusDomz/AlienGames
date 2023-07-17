@@ -74,7 +74,7 @@ if (stateSesion) {
 let container = document.getElementById('container');
 setTimeout(function(){
     container.classList.add('cerrar')
-}, 2000);
+}, 600);
 
 
 // efecto de fondo.
