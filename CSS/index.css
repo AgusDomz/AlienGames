@@ -128,3 +128,59 @@ li img {
 #exitBtn{
     color: #00ff00;
 }
+
+.containerc {
+    position: fixed;
+    background-image: url(/img/fondoLoginCinco.jpg);
+    color: #fff;
+    width: 100%;
+    z-index: 100000;
+    height: 100vh;
+    display: flex;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+
+}
+
+/* estilo de carga de la pagina */
+
+.preloader {
+    top: 30px;
+    margin: auto;
+    width: 450px;
+    margin-bottom: 450px;
+    background: black;
+    position: relative;
+    border-radius: 50px;
+    
+}
+
+.preloader:before {
+    position: absolute;
+    background: black;
+    width: 80px;
+    height: 50px;
+    animation: preloader 3s infinite;
+    border-radius: 60px;
+}
+
+.preloader h1{
+    margin: 0;
+    margin-top: 10px;
+    margin-left: 20px;
+    line-height: 30px;
+    font-size: 100px;
+    position: absolute;
+    left: 40%;
+    transform: translateX(-40%);
+    opacity: 0.70;
+}
+
+.cerrar {
+    transform: translateY(-100%);
+    transition: 2s;
+}

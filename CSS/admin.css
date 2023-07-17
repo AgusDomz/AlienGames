@@ -5,8 +5,12 @@
 }
 
 body {
-    
+
     background-color: black;
+}
+
+.fa-star.text-warning {
+    color: #FFD700;
 }
 
 #userBtn:hover {
@@ -74,6 +78,7 @@ body {
 }
 
 #userBtn,
-#exitBtn{
+#exitBtn {
     color: #00ff00;
 }
+
