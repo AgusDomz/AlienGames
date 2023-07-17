@@ -68,12 +68,7 @@ nav{
     filter: grayscale(0%);
 }
 
-footer{
-    background: white;
-    border: solid red;
-    margin-top: 200px;
-    margin-bottom: 0px;
-}
+
 li img {
     height: auto;
     max-width: 50px;
