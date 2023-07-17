@@ -18,18 +18,64 @@ document.addEventListener('keyup', e=>{
 
 
 // Parráfos ocultos.
-function mostrarOculto(cardId) {
-    let textoOculto = document.querySelector(`.card:nth-child(${cardId}) .texto-oculto`);
-    let botonMostrar = document.getElementById(`card${cardId}-mostrarTexto`);
+// function mostrarOculto(cardId) {
+//     let textoOculto = document.querySelector(`.card:nth-child(${cardId}) .texto-oculto`);
+//     let botonMostrar = document.getElementById(`card${cardId}-mostrarTexto`);
   
-    if (textoOculto.classList.contains('oculto')) {
-      textoOculto.classList.remove('oculto');
-      botonMostrar.innerHTML = "Mostrar menos";
-    } else {
-      textoOculto.classList.add('oculto');
-      botonMostrar.innerHTML = "Mostrar más";
-    }
-  }
+//     if (textoOculto.classList.contains('oculto')) {
+//       textoOculto.classList.remove('oculto');
+//       botonMostrar.innerHTML = "Mostrar menos";
+//     } else {
+//       textoOculto.classList.add('oculto');
+//       botonMostrar.innerHTML = "Mostrar más";
+//     }
+//   }
+
+//Funcion del video principal.
+
+const videoContainer = document.querySelector('.video-container');
+    const video = document.querySelector('.video');
+    const img = document.querySelector('.video-container img');
+
+    videoContainer.addEventListener('mouseenter', () => {
+        video.style.display = 'block';
+        video.style.position = 'absolute';
+        video.style.top = `${img.offsetTop}px`;
+        video.style.left = `${img.offsetLeft}px`;
+        video.style.width = `${img.offsetWidth}px`;
+        video.style.height = `${img.offsetHeight}px`;
+        video.play();
+    });
+
+    videoContainer.addEventListener('mouseleave', () => {
+        video.style.display = 'none';
+        video.pause();
+    });
+
+    //Funcion del carrusel.
+
+    const carouselContent = document.querySelectorAll('.carousel-content');
+    
+    carouselContent.forEach(content => {
+        const img = content.querySelector('img');
+        const video = content.querySelector('video');
+
+        content.addEventListener('mouseenter', () => {
+            video.style.display = 'block';
+            video.style.position = 'absolute';
+            video.style.top = `${img.offsetTop}px`;
+            video.style.left = `${img.offsetLeft}px`;
+            video.style.width = `${img.offsetWidth}px`;
+            video.style.height = `${img.offsetHeight}px`;
+            video.play();
+        });
+
+        content.addEventListener('mouseleave', () => {
+            video.style.display = 'none';
+            video.pause();
+        });
+
+    });
   
   
 
