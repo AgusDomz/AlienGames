@@ -209,7 +209,7 @@ function register() {
         cajaTraseraLogin.style.display = "block";
         cajaTraseraLogin.style.opacity = "1";
     }
-    
+
 
 }
 
