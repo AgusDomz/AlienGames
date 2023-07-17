@@ -31,11 +31,15 @@ body{
 #nombresCard{
     text-decoration: none;
     color: black;
-    border: solid red;
+    transform:scale(1) ;
+}
+
+#nombreCard:hover{
+    transform: scale(1.2);
+    color: aliceblue;
 }
 
 #banner{
-    margin-top: 3%;
     padding-top: 6%;
     padding-bottom: 10%;
     background-image: url(../img/Banner\ NinjaGo.png);
@@ -67,12 +71,7 @@ body{
 }
 
 
-footer{
-    background: white;
-    border: solid red;
-    margin-top: 200px;
-    margin-bottom: 0px;
-}
+
 li img {
     height: auto;
     max-width: 50px;
