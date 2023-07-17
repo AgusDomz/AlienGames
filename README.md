@@ -5,13 +5,14 @@ AlienGames es una pagina de videojuegos, en el que practicamos el nuevo lenguaje
 
 ## Deployado
 
-- 
+- https://silver-kitten-efa642.netlify.app/html/
 
 ## Herramientas utilizadas 🛠️
 
 
 1. [Bootstrap v5](https://getbootstrap.com/)
 1. [FontAwesome](https://fontawesome.com/)
+1. [SweetAlert](https://sweetalert2.github.io/)
 
 ## Autores 👩‍💻👨‍💻
 
