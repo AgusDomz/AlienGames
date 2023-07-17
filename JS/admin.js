@@ -15,6 +15,10 @@ const cargarDatosLS = () => {
     const datosStorage = localStorage.getItem('datos');
     datos = datosStorage ? JSON.parse(datosStorage) : [];
 
+    datos.forEach(item => {
+        item.destacado = item.destacado || false; // Si no existe la propiedad, establecerla en false
+    });
+
 };
 
 const almacenarDatosLS = () => {
@@ -22,7 +26,12 @@ const almacenarDatosLS = () => {
     localStorage.setItem('datos', JSON.stringify(datos));
 }
 
-
+window.destacado = (codigo) => {
+    let index = datos.findIndex((item) => item.codigo == codigo);
+    datos[index].destacado = !datos[index].destacado;
+    cargarTabla();
+    almacenarDatosLS();
+};
 
 window.mostrarModal = (codigo) => {
 
@@ -83,17 +92,19 @@ const cargarTabla = () => {
                 <div class="d-flex gap-3 justify-content-center">
                     <button class="btn btn-outline-warning" onclick="mostrarModal(${item.codigo})"><i class="fa-regular fa-pen-to-square"></i></button>
                     <button class="btn btn-outline-danger" onclick="borrarJuego(${item.codigo})"><i class="fa-solid fa-trash fa-beat-fade"></i></button>
+                    <button class="btn btn-outline-success" onclick="destacado(${item.codigo})">
+                    <i class="fa-solid fa-star fa-lg ${item.destacado ? 'text-warning' : ''}"></i>
+                </button>
                 </div>
             </td> 
         </tr>
         `
 
-
+        
         fila.innerHTML = celdas;
         cuerpoTabla.append(fila)
     });
 };
-
 
 // Funcion para agregar un juego
 const agregarJuego = (e) => {
@@ -180,8 +191,6 @@ window.borrarJuego = (codigo) => {
             }
         });
 };
-
-
 
 
 cargarDatosLS();

@@ -7,56 +7,86 @@ const formLogin = document.getElementById('formulario-login');
 const btnInicio = document.getElementById('btnLogin');
 let inicioSesion = false;
 
+
+
 // Función para validar ingreso al botón Ingresar
 const ingresoUser = (e) => {
     e.preventDefault();
 
-    let parrafoError = document.getElementById('parrafoError');
     let inputEmailLogin = document.getElementById('inputEmailLogin');
     let inputContraseñaLogin = document.getElementById('inputContraseñaLogin');
 
-    if (inputEmailLogin.value === adminUser.email &&
-        inputContraseñaLogin.value === adminUser.contraseña) {
-        inicioSesion = true;
-        parrafoError.innerHTML = `<p class="text-center text-success text-uppercase mt-3">${"Bienvenido Admin!"}</p>`;
+    if (inputEmailLogin.value === adminUser.email && inputContraseñaLogin.value === adminUser.contraseña) {
 
+        inicioSesion = true;
         sessionStorage.setItem("EstadoDeSesion", JSON.stringify(inicioSesion));
         localStorage.setItem("adminUser", JSON.stringify(adminUser));
         sessionStorage.setItem("userActivo", JSON.stringify(adminUser));
 
-        window.setTimeout(function(){
+        Swal.fire({
+            icon: 'success',
+            title: 'Bienvenido Admin!',
+            text: 'Iniciando sesión...',
+            timer: 2000,
+            timerProgressBar: true,
+            showConfirmButton: false
+        }).then(() => {
             window.location.replace('index.html');
-        }, 2000);
+        });
         return;
     } else {
         const Usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
         const resultado = Usuarios.find(
             (user) =>
-                user.userEmailRegister === inputEmailLogin.value &&
+                user.userEmailRegister === inputEmailLogin.value ||
                 user.userContraseñaRegister === inputContraseñaLogin.value
         );
 
         if (resultado !== undefined) {
+            // Código para usuario común
             inicioSesion = true;
-            parrafoError.innerHTML = `<p class="text-center text-success text-uppercase mt-3">${"Bienvenido Usuario!"}</p>`;
             sessionStorage.setItem("EstadoDeSesion", JSON.stringify(inicioSesion));
             localStorage.setItem("userComun", JSON.stringify(resultado));
             sessionStorage.setItem("userActivo", JSON.stringify(resultado));
-            window.setTimeout(function (){
-                window.location.replace('index.html')
-            }, 2000)
-        } else {
-            parrafoError.innerHTML = `<p class="text-center text-danger text-uppercase mt-3">${"Email o contraseña incorrectos!"}</p>`;
-            window.setTimeout(function(){
-                window.location.reload();
-            }, 2000);
-        }
 
-        if (inputEmailLogin.value === "" || inputContraseñaLogin.value === "") {
-            parrafoError.innerHTML = `<p class="text-center text-warning text-uppercase mt-3">${"Completa los campos!"}</p>`;
+            Swal.fire({
+                icon: 'success',
+                title: 'Bienvenido :D',
+                text: 'Iniciando sesión...',
+                timer: 2000,
+                timerProgressBar: true,
+                showConfirmButton: false
+            }).then(() => {
+                window.location.replace('index.html');
+            });
+        } else {
+            // Código para email o contraseña incorrectos
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: 'Email o contraseña incorrectos!',
+                timer: 2000,
+                timerProgressBar: true,
+                showConfirmButton: false
+            }).then(() => {
+                window.location.reload();
+            });
         }
     }
+
+    if (inputEmailLogin.value === "" || inputContraseñaLogin.value === "") {
+        // Código para campos incompletos
+        Swal.fire({
+            icon: 'warning',
+            title: 'Advertencia',
+            text: 'Completa los campos!',
+            timer: 2000,
+            timerProgressBar: true,
+            showConfirmButton: false
+        });
+    }
 };
+
 
 btnInicio.addEventListener('click', ingresoUser);
 
@@ -70,7 +100,6 @@ if (window.location.href.includes("admin.html")) {
 }
 
 
-// Registro de usuarios
 registroForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
@@ -79,17 +108,37 @@ registroForm.addEventListener('submit', (e) => {
     const userNombreUsuario = document.getElementById('inputUser').value;
     const userContraseñaRegister = document.getElementById('inputContraseña').value;
 
-
     const emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailValido.test(userEmailRegister)) {
-        return alert('Por favor, ingresa un email válido.');
+        return Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'Verifica! puede que olvidaras el @ o ese mail ya exista. ;D'
+        });
+    }
+
+    // Validación de la contraseña
+    if (userContraseñaRegister.length < 6 || userContraseñaRegister.length > 15) {
+        return Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'La contraseña debe tener entre 6 y 15 caracteres.'
+        });
     }
 
     const Usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
-    const userRegistrado = Usuarios.find(usuario => usuario.userEmailRegister === userEmailRegister);
+    const userRegistrado = Usuarios.find(
+        (usuario) =>
+            usuario.userEmailRegister === userEmailRegister ||
+            usuario.userNombreUsuario === userNombreUsuario
+    );
 
     if (userRegistrado) {
-        return alert('El usuario ya está registrado');
+        return Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'El usuario ya está registrado'
+        });
     } else {
         Usuarios.push({
             userNombreCompleto: userNombreCompleto,
@@ -100,9 +149,20 @@ registroForm.addEventListener('submit', (e) => {
     }
 
     localStorage.setItem('usuarios', JSON.stringify(Usuarios));
-    alert('Registrado');
-    window.location.href = 'login.html';
+
+    Swal.fire({
+        icon: 'success',
+        title: 'Registrado',
+        text: 'Te has registrado exitosamente.',
+        timer: 2000,
+        timerProgressBar: true,
+        showConfirmButton: false
+    }).then(() => {
+        window.location.href = 'login.html';
+    });
 });
+
+
 
 
 
@@ -172,8 +232,7 @@ function iniciarSesion() {
         cajaTraseraRegister.style.display = "block";
         cajaTraseraLogin.style.display = "none";
     }
-
-}
+};
 
 particlesJS(
     {

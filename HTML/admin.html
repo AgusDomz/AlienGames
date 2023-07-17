@@ -16,15 +16,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@800&display=swap" rel="stylesheet">
-
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.6/dist/sweetalert2.all.min.js"></script>
 </head>
 
 <body>
-
     <div id="particles-js"></div>
 
     <!-- Nabvar -->
+
     <header>
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
@@ -38,37 +36,37 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="m-3 navbar-nav ms-auto mb-lg-0 d-flex align-items-center fw-bold">
-                        <li class="nav-item"><a href="/HTML/index.html" class="nav-link btn btn-outline-ligh">Inicio</a>
+                        <li class="nav-item"><a href="/HTML/index.html" class="nav-link btn btn-success">Inicio</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle btn" href="#" id="navbarDropdownMenu" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle btn btn-success" href="#" id="navbarDropdownMenu"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Menú
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenu">
                                 <li class="nav-item">
-                                    <a id="linkLogin" class="nav-link btn btn-ligh" href="/HTML/login.html">Login</a>
+                                    <a id="linkLogin" class="nav-link btn btn-light" href="/HTML/login.html">Login</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a id="linkAdmin" class="nav-link btn btn-ligh d-none"
+                                    <a id="linkAdmin" class="nav-link btn btn-light d-none"
                                         href="/HTML/admin.html">Administracion</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link btn btn-ligh" href="/HTML/nosotros.html">Nosotros</a>
+                                    <a class="nav-link btn btn-light" href="/HTML/nosotros.html">Nosotros</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link btn btn-ligh" href="/HTML/contacto.html">Contacto</a>
+                                    <a class="nav-link btn btn-light" href="/HTML/contacto.html">Contacto</a>
                                 </li>
                             </ul>
                         </li>
-                        <form action="" class="d-flex">
-                            <input class="form-control me-2 form-control-sm" type="search" placeholder="Buscar juego..."
-                                aria-label="Search">
-                            <button class="btn btn-outline" type="submit" style="background: #00ff00;">
+                        <form action="" class="d-flex ms-1">
+                            <input class="form-control me-2 form-control-sm" type="text" placeholder="Buscar juego..."
+                                name="buscador" id="buscador" aria-label="Search">
+                            <button class="btn btn-outline" style="background: #00ff00;">
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </button>
                         </form>
-                        <a type="button" class="btn d-none text-white" href="login.html" id="userBtn"></a>
+                        <a type="button" class="btn btn-light d-none text-white" href="login.html" id="userBtn"></a>
                         <button class="btn btn-dark d-none" id="exitBtn">
                             <i class="fa-solid fa-right-from-bracket fa-lg"></i>
                         </button>
@@ -114,8 +112,6 @@
         </div>
     </section>
 
-
-    
 
     <!-- Modal Agregar -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -205,12 +201,10 @@
         integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
         crossorigin="anonymous"></script>
     <script src="/JS/admin.js" type="module"></script>
-    <script 
-    src="https://kit.fontawesome.com/62a7482696.js" 
-    crossorigin="anonymous">
-    </script>
     <script src="/JS/particles.min.js"></script>
     <script src="/JS/index.js"></script>
+    <script src="https://kit.fontawesome.com/62a7482696.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.6/dist/sweetalert2.all.min.js"></script>
 </body>
 
 </html>
