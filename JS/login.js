@@ -17,7 +17,7 @@ const ingresoUser = (e) => {
     let inputContraseñaLogin = document.getElementById('inputContraseñaLogin');
 
     if (inputEmailLogin.value === adminUser.email && inputContraseñaLogin.value === adminUser.contraseña) {
-        // Código para administrador
+
         inicioSesion = true;
         sessionStorage.setItem("EstadoDeSesion", JSON.stringify(inicioSesion));
         localStorage.setItem("adminUser", JSON.stringify(adminUser));
@@ -38,7 +38,7 @@ const ingresoUser = (e) => {
         const Usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
         const resultado = Usuarios.find(
             (user) =>
-                user.userEmailRegister === inputEmailLogin.value &&
+                user.userEmailRegister === inputEmailLogin.value ||
                 user.userContraseñaRegister === inputContraseñaLogin.value
         );
 
@@ -51,7 +51,7 @@ const ingresoUser = (e) => {
 
             Swal.fire({
                 icon: 'success',
-                title: 'Bienvenido Usuario!',
+                title: 'Bienvenido :D',
                 text: 'Iniciando sesión...',
                 timer: 2000,
                 timerProgressBar: true,
@@ -100,7 +100,6 @@ if (window.location.href.includes("admin.html")) {
 }
 
 
-// Registro de usuarios
 registroForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
@@ -114,21 +113,25 @@ registroForm.addEventListener('submit', (e) => {
         return Swal.fire({
             icon: 'error',
             title: 'Error',
-            text: 'Por favor, ingresa un email válido.'
+            text: 'Verifica! puede que olvidaras el @ o ese mail ya exista. ;D'
         });
     }
 
     // Validación de la contraseña
-    if (userContraseñaRegister.length < 6 || userContraseñaRegister.length > 8) {
+    if (userContraseñaRegister.length < 6 || userContraseñaRegister.length > 15) {
         return Swal.fire({
             icon: 'error',
             title: 'Error',
-            text: 'La contraseña debe tener entre 6 y 8 caracteres.'
+            text: 'La contraseña debe tener entre 6 y 15 caracteres.'
         });
     }
 
     const Usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
-    const userRegistrado = Usuarios.find(usuario => usuario.userEmailRegister === userEmailRegister);
+    const userRegistrado = Usuarios.find(
+        (usuario) =>
+            usuario.userEmailRegister === userEmailRegister ||
+            usuario.userNombreUsuario === userNombreUsuario
+    );
 
     if (userRegistrado) {
         return Swal.fire({
@@ -150,7 +153,7 @@ registroForm.addEventListener('submit', (e) => {
     Swal.fire({
         icon: 'success',
         title: 'Registrado',
-        text: 'Usuario registrado exitosamente.',
+        text: 'Te has registrado exitosamente.',
         timer: 2000,
         timerProgressBar: true,
         showConfirmButton: false
@@ -158,6 +161,7 @@ registroForm.addEventListener('submit', (e) => {
         window.location.href = 'login.html';
     });
 });
+
 
 
 

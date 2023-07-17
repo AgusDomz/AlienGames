@@ -1,17 +1,17 @@
 'use strict';
 
 // Buscar
-document.addEventListener('keyup', e=>{ 
-    
+document.addEventListener('keyup', e => {
+
     if (e.target.matches('#buscador')) {
 
-    if (e.key ==='Escape')e.target.value = ''
+        if (e.key === 'Escape') e.target.value = ''
 
-        document.querySelectorAll('.articulo').forEach(game =>{
+        document.querySelectorAll('.articulo').forEach(game => {
 
             game.textContent.toLowerCase().includes(e.target.value.toLowerCase())
-            ?game.classList.remove('filtro')
-            :game.classList.add('filtro')
+                ? game.classList.remove('filtro')
+                : game.classList.add('filtro')
         });
     }
 });
@@ -21,25 +21,23 @@ document.addEventListener('keyup', e=>{
 function mostrarOculto(cardId) {
     let textoOculto = document.querySelector(`.card:nth-child(${cardId}) .texto-oculto`);
     let botonMostrar = document.getElementById(`card${cardId}-mostrarTexto`);
-  
-    if (textoOculto.classList.contains('oculto')) {
-      textoOculto.classList.remove('oculto');
-      botonMostrar.innerHTML = "Mostrar menos";
-    } else {
-      textoOculto.classList.add('oculto');
-      botonMostrar.innerHTML = "Mostrar más";
-    }
-  }
-  
-  
 
+    if (textoOculto.classList.contains('oculto')) {
+        textoOculto.classList.remove('oculto');
+        botonMostrar.innerHTML = "Mostrar menos";
+    } else {
+        textoOculto.classList.add('oculto');
+        botonMostrar.innerHTML = "Mostrar más";
+    }
+}
+
+// Estado de sesion de usuarios
 let userAdmin = { email: "admin@admin.com", contraseña: "Admin1234" };
 let stateSesion = JSON.parse(sessionStorage.getItem("EstadoDeSesion")) || false;
 let user = JSON.parse(sessionStorage.getItem("userActivo")) || "";
 let linkAdmin = document.getElementById("linkAdmin");
 let userBtn = document.getElementById("userBtn");
 let exitBtn = document.getElementById("exitBtn");
-
 
 const closeSesion = () => {
     if (stateSesion) {
@@ -62,8 +60,8 @@ if (stateSesion) {
         userBtn.removeAttribute("href");
         exitBtn.addEventListener("click", closeSesion);
     } else {
-        exitBtn.className = "btn text-ligth"
-        userBtn.className = "btn-user btn text-ligth"
+        exitBtn.className = "btn text-light" // Corrige 'text-ligth' a 'text-light'
+        userBtn.className = "btn-user btn text-light" // Corrige 'text-ligth' a 'text-light'
         userBtn.innerHTML = user.userNombreUsuario;
         userBtn.removeAttribute("href")
         exitBtn.addEventListener("click", closeSesion);
@@ -72,10 +70,22 @@ if (stateSesion) {
 
 // preloader
 let container = document.getElementById('container');
-setTimeout(function(){
+setTimeout(function () {
     container.classList.add('cerrar')
 }, 600);
 
+// Verificar si el preloader ya se ha mostrado antes
+const preloaderShown = sessionStorage.getItem('preloaderShown');
+
+// Si el preloader no se ha mostrado, lo mostramos y establecemos el valor en sessionStorage
+if (!preloaderShown) {
+    let container = document.getElementById('container');
+    setTimeout(function () {
+        container.classList.add('cerrar');
+    }, 600);
+
+    sessionStorage.setItem('preloaderShown', 'true');
+}
 
 // efecto de fondo.
 
