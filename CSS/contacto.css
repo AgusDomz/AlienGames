@@ -6,3 +6,72 @@
 #exitBtn{
     color: #00ff00;
 }
+
+
+body {
+    background: #505350;
+    
+}
+
+
+
+.card {
+    position: relative;
+    width: 400px;
+    height: 200px;
+    background-color: transparent;
+    border: 0;
+    border-color: transparent;
+    
+    }
+    .card div {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        backface-visibility: hidden;
+        transition: 1s;
+    
+    }
+    
+    .card .front{
+        background: #909990;
+        transform: perspective(500px) rotateY(0deg);
+    }
+    
+    .card .back{
+        background: #272927;
+        transform: perspective(500px) rotateY(180deg);
+    }
+    
+    .card:hover.front {
+        transform: perspective(500px) rotateY(180deg);   
+    }
+    
+    .card:hover .back{
+    
+        transform: perspective(500px) rotateY(360deg);   
+    }
+    
+    .card div h1 {
+        font-size: 40px;
+        color: beige;
+    }
+    
+
+    .bloquear {
+        resize: none
+    }
+    .mapa{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+
+    @media screen and (max-width: 394px){
+        .mapa{
+            display: none;
+            }
+    }
