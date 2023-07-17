@@ -1,18 +1,37 @@
 'use strict';
 
-// Parráfos ocultos.
-function mostrarOculto() {
-    let textoOculto = document.querySelector('.texto-oculto');
-    let botonMostrar = document.getElementById('mostrarTexto');
+// Buscar
+document.addEventListener('keyup', e=>{ 
+    
+    if (e.target.matches('#buscador')) {
 
-    if (textoOculto.classList.contains('oculto')) {
-        textoOculto.classList.remove('oculto');
-        botonMostrar.innerHTML = 'Mostrar menos';
-    } else {
-        textoOculto.classList.add('oculto');
-        botonMostrar.innerHTML = 'Mostrar más';
+    if (e.key ==='Escape')e.target.value = ''
+
+        document.querySelectorAll('.articulo').forEach(game =>{
+
+            game.textContent.toLowerCase().includes(e.target.value.toLowerCase())
+            ?game.classList.remove('filtro')
+            :game.classList.add('filtro')
+        });
     }
-}
+});
+
+
+// Parráfos ocultos.
+function mostrarOculto(cardId) {
+    let textoOculto = document.querySelector(`.card:nth-child(${cardId}) .texto-oculto`);
+    let botonMostrar = document.getElementById(`card${cardId}-mostrarTexto`);
+  
+    if (textoOculto.classList.contains('oculto')) {
+      textoOculto.classList.remove('oculto');
+      botonMostrar.innerHTML = "Mostrar menos";
+    } else {
+      textoOculto.classList.add('oculto');
+      botonMostrar.innerHTML = "Mostrar más";
+    }
+  }
+  
+  
 
 let userAdmin = { email: "admin@admin.com", contraseña: "Admin1234" };
 let stateSesion = JSON.parse(sessionStorage.getItem("EstadoDeSesion")) || false;
@@ -36,8 +55,8 @@ const closeSesion = () => {
 if (stateSesion) {
     if (user.email === userAdmin.email &&
         user.contraseña === userAdmin.contraseña) {
-        linkAdmin.className = "nav-link btn btn-ligh"
-        exitBtn.className = "btn text-ligth"
+        linkAdmin.className = "nav-link btn btn-light"
+        exitBtn.className = "btn"
         userBtn.className = "btn-user btn"
         userBtn.innerHTML = "Admin"
         userBtn.removeAttribute("href");
